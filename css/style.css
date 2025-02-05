@@ -1,0 +1,181 @@
+/* Allgemeine Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* Navigation */
+header {
+  background-color: #1a1a1a;
+  padding: 0px 2rem;
+  position: fixed;
+  width: 100%;
+  height: 5rem;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between; /* Abstand zwischen Links & Logo */
+  align-items: center;
+  z-index: 1000;
+
+}
+
+/* Links in der Navigation */
+.nav-left {
+  display: flex;
+}
+
+.nav-left ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-left ul li {
+  display: inline;
+}
+
+.nav-left ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-left ul li a:hover {
+  color: #F2B807; /* Hauptfarbe */
+}
+
+/* Logo in der Mitte */
+.nav-right {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5rem;
+  padding: 0;
+  top: 0;
+}
+
+/* Logo Styling */
+.nav-right img {
+  height: 2.5rem;
+  display: block;
+  object-fit: contain;
+}
+
+/* Hero-Bereich mit fixiertem Hintergrund */
+.hero {
+  height: 100vh;
+  background: url('../img/hero.jpg') center/cover no-repeat fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 170, 0, 0.6); /* Orange-Gelber Filter */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-size: 3.75rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* Projektbereich mit Parallax */
+.projekt {
+  position: relative;
+  margin-top: 100vh; /* Damit die Projekt-Sektion nach dem fixierten Hero beginnt */
+  padding: 100px 20px;
+  text-align: center;
+  background-color: #222;
+  transform: translateY(50px); /* Startposition */
+  transition: transform 0.1s linear;
+  z-index: 3;
+}
+
+.projekt-text h2 {
+  font-size: 2.5rem;
+  color: #F2A007;
+}
+
+.projekt-text p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+}
+
+/* Galerie */
+.galerie {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 0 50px;
+}
+
+.galerie img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.galerie img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-left ul {
+    display: none; /* Menü ausblenden für Mobile */
+  }
+
+  .nav-right {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .galerie {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
