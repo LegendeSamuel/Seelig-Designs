@@ -327,8 +327,9 @@ header {
 }
 
 .testimonial-image img {
-  width: 100px;
-  height: 100px;
+  display: block;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid #F2A007;
@@ -345,12 +346,16 @@ header {
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   cursor: pointer;
   transition: background-color 0.3s, border-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.45rem;
 }
 
 .slider-btn:hover {
@@ -369,22 +374,108 @@ header {
 }
 
 .cta-button {
-  background-color: #F2A007;
-  color: #121212;
-  padding: 0.8rem 2rem;
+  color: white;
+  padding: 0.8rem 2rem 1rem 2rem;
   border-radius: 50px;
-  font-weight: 700;
+  border: 2px solid #F2A007;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
-  border: none;
   text-decoration: none;
 }
 
 .cta-button:hover {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  background-color: #F2A007;
+  color: #121212;
+}
+
+/* === FOOTER SECTION === */
+.site-footer {
+  background-color: #F2A007;
+  color: #121212;
+  padding: 3rem 2rem 0;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-logo img {
+  height: 4rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav a {
+  color: #121212;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.footer-nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #121212;
+  transition: width 0.3s ease;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.footer-contact a {
+  display: inline-block; /* Wichtig für transform */
+  padding: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-contact a:hover {
+  transform: scale(1.1);
+}
+
+.footer-icon {
+  height: 2rem;
+  width: 2rem;
+  vertical-align: middle; /
+}
+
+.footer-contact a:hover {
+  transform: scale(1.1);
+}
+
+.footer-bottom-bar {
+  text-align: center;
+  padding: 1.5rem 2rem;
+}
+
+.footer-bottom-bar p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 
@@ -427,5 +518,17 @@ header {
   }
   .testimonial-content {
     text-align: center;
+  }
+}
+/* Responsive Anpassungen für den Footer */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+    gap: 1rem;
   }
 }
