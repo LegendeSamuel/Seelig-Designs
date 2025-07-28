@@ -16,6 +16,9 @@
     <div class="nav-left">
       <ul>
         <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
         <li><a href="#">Kontakt</a></li>
       </ul>
     </div>
@@ -27,32 +30,149 @@
 
 <!-- Hero-Bereich -->
 <section class="hero">
-  <div class="overlay"></div>
+  <div class="hero-background"></div>
   <div class="hero-content">
-    <h1>Wenn es einfach wäre, <br>wäre es langweilig.</h1>
-    <p>Ein kleiner Einblick in meine Werke</p>
+    <h1>If it were easy, <br>it would be boring.</h1>
   </div>
 </section>
 
-  <!-- Projekt-Bereich -->
-  <section class="projekt">
-    <div class="projekt-text">
-      <h2>Mein erstes Projekt</h2>
-      <p>Hier siehst du einige meiner Arbeiten, die meine Kreativität und mein Designverständnis zeigen.</p>
+<!-- Wrapper für den gesamten scrollbaren Inhalt -->
+<main class="page-content">
+
+  <!-- Intro-Bereich -->
+  <section class="intro">
+    <div class="intro-container">
+      <div class="intro-image">
+        <img src="img/profil.jpg" alt="Profilbild von Samuel Seelig" class="profil">
+      </div>
+      <div class="intro-text">
+        <h2>Who I am</h2>
+        <p>I'm Samuel Seelig – photographer, observer, and passionate moment-hunter. When I captured raindrops suspended midair in Japan, I realized what truly drives me: freezing time, the art of capturing fleeting moments and turn them visible. <strong>"If it were easy, it would be boring" </strong> – this has been my motto since my school days. I actively seek challenges because that's precisely where lasting images are created. Whether capturing spontaneous joy at an event, intricate details in architecture, or the tranquility of landscapes, I approach photography like observing wildlife – quietly and patiently waiting for the perfect moment. My camera isn't merely a tool; it's my way of authentically capturing people, stories, and nature alike.</p>
+      </div>
     </div>
-    <div class="galerie">
-      <img src="img/Projekt%20SS/SS---5-Stars-01.jpg" alt="Projektbild 1">
-      <img src="img/Projekt%20SS/SS---5-Stars-05.jpg" alt="Projektbild 2">
-      <img src="img/Projekt%20SS/SS---5-Stars-08.jpg" alt="Projektbild 3">
-      <img src="img/Projekt%20SS/SS---5-Stars-11.jpg" alt="Projektbild 4">
-      <img src="img/Projekt%20SS/SS---5-Stars-14.jpg" alt="Projektbild 5">
+  </section>
+
+  <!-- Showcase-Bereich mit Masonry Grid -->
+  <section class="showcase">
+    <div class="showcase-header">
+      <h2>Highlights</h2>
+      <p>Below, you’ll find a carefully curated gallery showcasing some of the diverse moments and captivating stories I've had the privilege to capture.</p>
+    </div>
+    <div class="masonry-grid">
+      <a href="" class="masonry-item">
+        <img src="img/featured/pexels-samuel-seelig-5998373-28358769.jpg" alt="architecture">
+        <div class="masonry-item-overlay"><h3>Architecture</h3></div>
+      </a>
+
+      <a href="" class="masonry-item">
+        <img src="img/featured/pexels-samuel-seelig-5998373-31112749.jpg" alt="japan">
+        <div class="masonry-item-overlay"><h3>Japan</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_9296.jpg" alt="japan">
+        <div class="masonry-item-overlay"><h3>Japan</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/SS---5-Stars-15.jpg" alt="Portraitprojekt">
+        <div class="masonry-item-overlay"><h3>Stylized Portraits</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/SS---5-Stars-08.jpg" alt="Portraitprojekt">
+        <div class="masonry-item-overlay"><h3>Stylized Portraits</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/pexels-samuel-seelig-5998373-28898037.jpg" alt="Portraitprojekt">
+        <div class="masonry-item-overlay"><h3>Portraits</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/pexels-samuel-seelig-5998373-28898148.jpg" alt="Portraitprojekt">
+        <div class="masonry-item-overlay"><h3>Portraits</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_1401.jpg" alt="Eventprojekt">
+        <div class="masonry-item-overlay"><h3>Couple Portraits</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_1508.JPG" alt="Landschaftsprojekt">
+        <div class="masonry-item-overlay"><h3>Alps</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_1756-2.jpg" alt="Landschaftsprojekt">
+        <div class="masonry-item-overlay"><h3>Alps</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_2419.jpg" alt="Produktprojekt">
+        <div class="masonry-item-overlay"><h3>Diamond Weddings</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_2741.jpg" alt="Produktprojekt">
+        <div class="masonry-item-overlay"><h3>Weddings</h3></div>
+      </a>
+      <a href="" class="masonry-item">
+        <img src="img/featured/IMG_3141.jpg" alt="Produktprojekt">
+        <div class="masonry-item-overlay"><h3>Weddings</h3></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- === TESTIMONIAL SLIDER SECTION === -->
+  <section class="testimonial-section">
+    <div class="testimonial-container">
+      <h2>What my customers have to say</h2>
+      <div class="testimonial-slider">
+
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active">
+          <div class="testimonial-content">
+            <p class="quote">"The photos are absolutely wonderful, and we're incredibly happy and satisfied with them. You did a fantastic job! We were particularly impressed by how you were almost invisible yet always in the right place. The results truly speak for themselves. We'll happily recommend you, and we look forward to the possibility of working with you again."</p>
+            <cite class="author">- Denise & Rinaldo</cite>
+          </div>
+          <div class="testimonial-image">
+            <img src="https://placehold.co/100x100/D6A2E8/333333?text=A+M" alt="Kundenfoto von Anna & Markus">
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="quote">"Für unser Business-Shooting brauchten wir professionelle und authentische Porträts. Samuel hat das perfekt umgesetzt. Die Zusammenarbeit war super angenehm und die Ergebnisse haben unsere Erwartungen übertroffen."</p>
+            <cite class="author">- Janine H., CEO Startup GmbH</cite>
+          </div>
+          <div class="testimonial-image">
+            <img src="https://placehold.co/100x100/F9A826/333333?text=J+H" alt="Kundenfoto von Janine H.">
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide">
+          <div class="testimonial-content">
+            <p class="quote">"Das Familienshooting war so entspannt und lustig. Samuel hat es geschafft, die Persönlichkeit unserer Kinder einzufangen, ohne dass es gestellt wirkte. Wir sind überglücklich mit den Bildern!"</p>
+            <cite class="author">- Familie Wagner</cite>
+          </div>
+          <div class="testimonial-image">
+            <img src="https://placehold.co/100x100/82E0AA/333333?text=F+W" alt="Kundenfoto von Familie Wagner">
+          </div>
+        </div>
+
+      </div>
+      <div class="slider-navigation">
+        <button class="slider-btn prev-btn" aria-label="Vorheriges Testimonial">&larr;</button>
+        <button class="slider-btn next-btn" aria-label="Nächstes Testimonial">&rarr;</button>
+      </div>
+      <div class="cta-after-testimonials">
+        <p>Bereit, deine eigene Geschichte mit mir zu schreiben?</p>
+        <a href="#" class="cta-button">Jetzt Kontakt aufnehmen</a>
+      </div>
     </div>
   </section>
 
 
 
-<script src="js/app.js"></script>
 
+
+</main>
+
+<script src="js/app.js"></script>
 </body>
 
 </html>

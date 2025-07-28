@@ -1,181 +1,431 @@
-/* Allgemeine Styles */
+/* === Basis-Stile === */
+* {
+  box-sizing: border-box;
+}
 body, html {
   margin: 0;
   padding: 0;
+  width: 100%;
   font-family: 'sofia-pro', sans-serif;
   color: white;
-  scroll-behavior: smooth;
+  background-color: #121212; /* Hintergrund auf den Body anwenden */
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Navigation */
-header {
-  background-color: #1a1a1a;
-  padding: 0 2rem;
+/* Der Frosted-Glass-Effekt im Hintergrund */
+body::before {
+  content: "";
   position: fixed;
-  width: 100%;
-  height: 5rem;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* === Navigation === */
+header {
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 5rem;
   display: flex;
-  justify-content: space-between; /* Abstand zwischen Links & Logo */
+  justify-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-shadow: inset 0 -10px 15px rgba(255, 255, 255, 0.1);
   z-index: 1000;
-
 }
-
-/* Links in der Navigation */
 .nav-left {
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  height: 5rem;
   display: flex;
+  align-items: center;
+}
+.nav-right {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-left ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
 }
-
-.nav-left ul li {
-  display: inline;
-}
-
-.nav-left ul li a {
+.nav-left a {
   color: white;
   text-decoration: none;
-  font-size: 1rem;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
-.nav-left ul li a:hover {
-  color: #F2B807; /* Hauptfarbe */
+.nav-left a:hover {
+  color: #F2B807;
 }
-
-/* Logo in der Mitte */
-.nav-right {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5rem;
-  padding: 0;
-  top: 0;
-}
-
-/* Logo Styling */
 .nav-right img {
   height: 2.5rem;
-  display: block;
-  object-fit: contain;
 }
 
-/* Hero-Bereich mit fixiertem Hintergrund */
+/* === Hero Section === */
 .hero {
-  height: 100vh;
-  background: url('../img/hero.jpg') center/cover no-repeat fixed;
-  position: fixed;
+  position: fixed; /* KORREKTUR: Hero wird am Viewport fixiert */
   top: 0;
   left: 0;
   width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  z-index: 1;
+  z-index: 1; /* Liegt hinter dem Inhalt */
+}
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background: url("../img/Landschaften/pexels-samuel-seelig-5998373-28406260.jpg") center/cover no-repeat;
+  filter: brightness(0.6);
+  z-index: -2;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,170,0,0.33);
+  z-index: -1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 2rem;
+  max-width: 80%;
+}
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 200;
+  line-height: 1.2;
+  text-transform: capitalize;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.7);
 }
 
-.hero .overlay {
+/* === Hauptinhalts-Wrapper === */
+.page-content {
+  position: relative;
+  z-index: 10; /* Liegt über dem Hero */
+  background-color: #181818;
+  margin-top: 100vh; /* KORREKTUR: Schiebt den Inhalt nach unten, um Platz für den fixierten Hero zu machen */
+}
+
+
+/* === Intro Bereich === */
+.intro {
+  padding: 6rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+.intro-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  flex-wrap: wrap; /* Erlaubt Umbruch auf kleinen Bildschirmen */
+  justify-content: center;
+}
+.intro-image {
+  flex-shrink: 0; /* Verhindert, dass das Bild schrumpft */
+}
+.profil {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #F2A007;
+}
+.intro-text {
+  flex-basis: 60%; /* Nimmt den restlichen Platz ein */
+  min-width: 300px; /* Verhindert, dass der Text zu schmal wird */
+}
+.intro-text h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #F2A007;
+  margin-bottom: 1rem;
+}
+.intro-text p {
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+
+/* === Showcase / Automatisches Masonry Grid mit CSS Columns === */
+.showcase {
+  padding: 6rem 2rem;
+  background-color: #222;
+}
+.showcase-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.showcase-header h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #F2A007;
+  margin-bottom: 1rem;
+}
+.showcase-header p {
+  max-width: 600px;
+  font-weight: 300;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.masonry-grid {
+  column-count: 4; /* Anzahl der Spalten für Desktop */
+  column-gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.masonry-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 20px; /* Abstand zwischen den Bildern in einer Spalte */
+  break-inside: avoid; /* WICHTIG: Verhindert, dass Bilder zerschnitten werden */
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+}
+
+.masonry-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+.masonry-item-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  background: linear-gradient(to top, rgba(242,160,7,0.8) 0%, transparent 100%);
+  border: 2px solid rgba(242,160,7,0.8);
+  border-radius: 15px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.masonry-item:hover .masonry-item-overlay {
+  opacity: 1;
+}
+
+.masonry-item-overlay h3 {
+  color: white;
+  font-size: 1.5rem;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.masonry-item:hover .masonry-item-overlay h3 {
+  transform: translateY(0);
+}
+
+
+/* === TESTIMONIAL SLIDER SECTION === */
+.testimonial-section {
+  padding: 6rem 2rem;
+  background-color: #181818;
+  position: relative;
+  z-index: 10;
+}
+
+.testimonial-container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-container h2 {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: capitalize;
+  color: #F2A007;
+  margin-bottom: 3rem;
+}
+
+.testimonial-slider {
+  position: relative;
+  min-height: 250px; /* Gibt dem Slider eine feste Höhe */
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-slide {
+  display: flex; /* NEU: Macht Flexbox für die Slide aktiv */
+  align-items: center; /* NEU: Zentriert Inhalt vertikal */
+  gap: 2rem; /* NEU: Abstand zwischen Text und Bild */
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: rgba(255, 170, 0, 0.6); /* Orange-Gelber Filter */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.6s ease, visibility 0.6s;
 }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
+.testimonial-slide.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.hero h1 {
-  font-size: 3.75rem;
-  font-weight: bold;
-  margin-bottom: 10px;
+.testimonial-content {
+  flex: 1; /* NEU: Textbereich nimmt den verfügbaren Platz ein */
+  text-align: left; /* NEU: Text linksbündig für bessere Lesbarkeit */
 }
 
-.hero p {
-  font-size: 1.2rem;
-  font-weight: lighter;
+.quote {
+  font-size: 1.3rem; /* Etwas kleiner für besseres Layout */
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
-/* Projektbereich mit Parallax */
-.projekt {
-  position: relative;
-  margin-top: 100vh; /* Damit die Projekt-Sektion nach dem fixierten Hero beginnt */
-  padding: 100px 20px;
-  text-align: center;
-  background-color: #222;
-  transform: translateY(50px); /* Startposition */
-  transition: transform 0.1s linear;
-  z-index: 3;
-}
-
-.projekt-text h2 {
-  font-size: 2.5rem;
+.author {
+  font-size: 1.1rem;
+  font-weight: 600;
   color: #F2A007;
 }
 
-.projekt-text p {
-  font-size: 1.2rem;
+.testimonial-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #F2A007;
+  flex-shrink: 0; /* Verhindert, dass das Bild schrumpft */
+}
+
+.slider-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.slider-btn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  max-width: 600px;
-  margin: 0 auto 40px auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
-/* Galerie */
-.galerie {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  padding: 0 50px;
+.slider-btn:hover {
+  background-color: #F2A007;
+  border-color: #F2A007;
+  color: #121212;
 }
 
-.galerie img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+.cta-after-testimonials {
+  margin-top: 4rem;
 }
 
-.galerie img:hover {
-  transform: scale(1.05);
+.cta-after-testimonials p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Mobile Navigation */
+.cta-button {
+  background-color: #F2A007;
+  color: #121212;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+
+
+/* === Mobile Anpassungen === */
 @media (max-width: 768px) {
-  header {
-    padding: 10px 20px;
-  }
+  header { padding: 1rem; }
+  .nav-left ul { display: none; }
+  .nav-right { left: auto; right: 1rem; transform: none; }
 
-  nav {
-    width: 100%;
+  .intro-container {
+    flex-direction: column;
+    text-align: center;
   }
-
-  .nav-left ul {
-    display: none; /* Menü ausblenden für Mobile */
-  }
-
-  .nav-right {
-    justify-content: space-between;
-    width: 100%;
+  .intro-text {
+    flex-basis: 100%;
   }
 
   .galerie {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 2; /* 2 Spalten für Tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .masonry-grid {
+    column-count: 1; /* 1 Spalte für Mobilgeräte */
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-slide {
+    flex-direction: column-reverse; /* Bild kommt über den Text */
+    text-align: center;
+  }
+  .testimonial-content {
+    text-align: center;
   }
 }
