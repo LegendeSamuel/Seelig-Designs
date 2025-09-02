@@ -1,45 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Überprüfen, ob der Slider auf der aktuellen Seite existiert
+
+  // --- LOGIK FÜR TESTIMONIAL SLIDER ---
   const slider = document.querySelector('.testimonial-slider');
-  if (!slider) {
-    return; // Wenn kein Slider da ist, wird der Code nicht ausgeführt
+  if (slider) {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      slides.forEach((slide) => {
+        slide.classList.remove('active');
+      });
+      slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    showSlide(currentSlide); // Initialen Slide anzeigen
   }
 
-  const slides = document.querySelectorAll('.testimonial-slide');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  let currentSlide = 0;
 
-  function showSlide(index) {
-    // Alle Slides ausblenden
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active');
+  // --- LOGIK FÜR MOBILES MENÜ ---
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  const navLeft = document.querySelector('.nav-left');
+  const body = document.querySelector('body');
+
+  if (mobileMenuButton && navLeft) {
+    mobileMenuButton.addEventListener('click', () => {
+      navLeft.classList.toggle('mobile-menu-open');
+      body.classList.toggle('mobile-menu-open'); // Diese Zeile hinzufügen
+      body.style.overflow = navLeft.classList.contains('mobile-menu-open') ? 'hidden' : '';
     });
 
-    // Den richtigen Slide anzeigen
-    slides[index].classList.add('active');
+    // Menü schließen
+    navLeft.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLeft.classList.remove('mobile-menu-open');
+        body.classList.remove('mobile-menu-open'); // Diese Zeile hinzufügen
+        body.style.overflow = '';
+      });
+    });
   }
 
-  function nextSlide() {
-    currentSlide++;
-    if (currentSlide >= slides.length) {
-      currentSlide = 0; // Springt zum ersten Slide zurück
-    }
-    showSlide(currentSlide);
+  // --- LOGIK FÜR HEADER-SCROLL-EFFEKT ---
+  const header = document.querySelector('header');
+  if(header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
   }
 
-  function prevSlide() {
-    currentSlide--;
-    if (currentSlide < 0) {
-      currentSlide = slides.length - 1; // Springt zum letzten Slide
-    }
-    showSlide(currentSlide);
-  }
-
-  // Event Listeners für die Buttons
-  nextBtn.addEventListener('click', nextSlide);
-  prevBtn.addEventListener('click', prevSlide);
-
-  // Initial den ersten Slide anzeigen
-  showSlide(currentSlide);
 });
+
