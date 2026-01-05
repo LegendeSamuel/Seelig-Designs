@@ -289,6 +289,13 @@ document.addEventListener('DOMContentLoaded', function () {
         body.style.overflow = '';
       });
     });
+
+    // --- INITIALIZE GLASS EFFECT FOR MOBILE MENU ---
+    new GlassSurface(navLeft, {
+      borderRadius: 0,
+      opacity: 0.98, // Stronger opacity for menu
+      blur: 20 // Stronger blur
+    });
   }
 
   // --- INITIALIZE GLASS EFFECT ---
