@@ -945,6 +945,42 @@ body.mobile-menu-open .mobile-menu-button span::after {
 /* === MOBILE ANPASSUNGEN === */
 @media (max-width: 992px) {
 
+  /* --- Text Alignment Overrides --- */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  .showcase-header,
+  .video-container,
+  .testimonial-container h2,
+  .intro-container,
+  .intro-text,
+  .masonry-item-overlay,
+  .testimonial-content {
+    text-align: left !important;
+  }
+
+  /* Keep Hero and CTA centered */
+  .hero h1,
+  .hero p,
+  .hero-content,
+  .cta-after-testimonials,
+  .cta-after-testimonials p {
+    text-align: center !important;
+  }
+
+  /* Center overlay text in cards if needed, or keep left? User said "all text". 
+     Usually card overlays look better centered or left. Let's stick to left as requested. */
+
+  /* Ensure containers allow left alignment */
+  .showcase-header p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   /* --- Mobile Navigation --- */
   nav {
     justify-content: space-between;
