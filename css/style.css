@@ -1155,9 +1155,14 @@ body.mobile-menu-open .mobile-menu-button span::after {
   flex-shrink: 0;
 }
 
-.contact-item .icon-box img {
+.contact-item .icon-box img,
+.contact-item .icon-box svg {
   width: 30px;
   height: 30px;
+}
+
+.contact-item .icon-box svg {
+  color: #F2A007;
 }
 
 .contact-item .text-box {
