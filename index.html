@@ -4,10 +4,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seelig Designs</title>
+  <title>Seelig Designs – Fotografie von Samuel Seelig</title>
+  <meta name="description" content="Seelig Designs – Fotografie von Samuel Seelig. Portraits, Hochzeiten, Events, Street, Landschaft und mehr. Ich halte fest, was sich nicht wiederholt.">
+  <meta name="author" content="Samuel Seelig">
+  <link rel="canonical" href="https://www.seelig-designs.de/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Seelig Designs">
+  <meta property="og:title" content="Seelig Designs – Fotografie von Samuel Seelig">
+  <meta property="og:description" content="Portraits, Hochzeiten, Events, Street, Landschaft und mehr. Ich halte fest, was sich nicht wiederholt.">
+  <meta property="og:image" content="https://www.seelig-designs.de/img/featured/pexels-samuel-seelig-5998373-31112749.jpg">
+  <meta property="og:url" content="https://www.seelig-designs.de/">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/ixl2sxe.css">
   <link rel="icon" href="favicon.ico" type="image/png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://www.seelig-designs.de/#business",
+    "name": "Seelig Designs",
+    "image": "https://www.seelig-designs.de/img/profil.jpg",
+    "url": "https://www.seelig-designs.de/",
+    "email": "samuelseelig@gmail.com",
+    "telephone": "+4915204664069",
+    "priceRange": "€€",
+    "founder": {
+      "@type": "Person",
+      "name": "Samuel Seelig",
+      "jobTitle": "Fotograf"
+    },
+    "sameAs": [
+      "https://www.instagram.com/seelig_designs/",
+      "https://www.pexels.com/de-de/@samuel-seelig-5998373/"
+    ],
+    "areaServed": "DE",
+    "knowsAbout": ["Portraitfotografie", "Hochzeitsfotografie", "Eventfotografie", "Streetfotografie", "Landschaftsfotografie"]
+  }
+  </script>
 </head>
 
 <body>
@@ -19,15 +53,21 @@
     <nav>
       <div class="nav-left">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active-link" aria-current="page" data-i18n="nav.home">Home</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Über mich</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
       </div>
       <div class="nav-right">
-        <img src="img/Left_Logo_Name_wht.svg" alt="Logo" class="logo">
+        <button class="lang-toggle" type="button" aria-label="Sprache wechseln" data-i18n-attr="aria-label:nav.lang">
+          <span data-lang="de">DE</span><span class="lang-sep">/</span><span data-lang="en">EN</span>
+        </button>
+        <a href="index.html" aria-label="Seelig Designs Home">
+          <img src="img/Left_Logo_Name_wht.svg" alt="Seelig Designs Logo" class="logo">
+        </a>
       </div>
-      <button class="mobile-menu-button">
+      <button class="mobile-menu-button" aria-label="Menü öffnen" aria-expanded="false">
         <span></span>
       </button>
     </nav>
@@ -36,12 +76,12 @@
   <!-- Hero-Bereich -->
   <section class="hero">
     <div class="hero-background">
-      <video autoplay muted loop playsinline>
+      <video autoplay muted loop playsinline poster="img/hero.jpg">
         <source src="img/hero.mp4" type="video/mp4">
       </video>
     </div>
     <div class="hero-content">
-      <h1>If it were easy, <br>it would be boring.</h1>
+      <h1 data-i18n-html="hero.title">Wäre es einfach,<br>wäre es langweilig.</h1>
     </div>
   </section>
 
@@ -52,18 +92,11 @@
     <section class="intro">
       <div class="intro-container">
         <div class="intro-image">
-          <img src="img/profil.jpg" alt="Profil of Samuel Seelig" class="profil">
+          <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" class="profil" loading="lazy" decoding="async">
         </div>
         <div class="intro-text">
-          <h2>Who I am</h2>
-          <p>I'm Samuel Seelig – photographer, observer, and passionate moment-hunter. When I captured raindrops
-            suspended midair in Japan, I realized what truly drives me: freezing time, the art of capturing fleeting
-            moments and turn them visible. <strong>"If it were easy, it would be boring" </strong> – this has been my
-            motto since my school days. I actively seek challenges because that's precisely where lasting images are
-            created. Whether capturing spontaneous joy at an event, intricate details in architecture, or the
-            tranquility of landscapes, I approach photography like observing wildlife – quietly and patiently waiting
-            for the perfect moment. My camera isn't merely a tool, it's my way of authentically capturing people,
-            stories, and nature alike.</p>
+          <h2 data-i18n="intro.h2">Wer ich bin</h2>
+          <p data-i18n-html="intro.p">Ich bin Samuel Seelig – Fotograf, Beobachter und leidenschaftlicher Moment-Jäger.</p>
         </div>
       </div>
     </section>
@@ -71,101 +104,102 @@
     <!-- Showcase-Bereich mit Masonry Grid -->
     <section class="showcase">
       <div class="showcase-header">
-        <h2>Highlights</h2>
-        <p>Below, you’ll find a carefully curated gallery showcasing some of the diverse moments and captivating stories
-          I've had the privilege to capture.</p>
+        <h2 data-i18n="showcase.h2">Highlights</h2>
+        <p data-i18n="showcase.p">Hier findest du eine sorgfältig kuratierte Auswahl der vielfältigen Momente und Geschichten, die ich festhalten durfte.</p>
       </div>
       <div class="masonry-grid">
         <div class="masonry-item">
-          <img src="img/featured/pexels-samuel-seelig-5998373-28358769.jpg" alt="architecture">
+          <img src="img/featured/pexels-samuel-seelig-5998373-28358769.jpg" alt="Architekturfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Architecture</h3>
-          </div>
-        </div>
-
-        <div class="masonry-item">
-          <img src="img/featured/pexels-samuel-seelig-5998373-31112749.jpg" alt="japan">
-          <div class="masonry-item-overlay">
-            <h3>Traditional</h3>
+            <h3 data-i18n="cat.architecture">Architektur</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_9296.jpg" alt="japan">
+          <img src="img/featured/pexels-samuel-seelig-5998373-31112749.jpg" alt="Traditionelle japanische Fotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Street Photography</h3>
+            <h3 data-i18n="cat.traditional">Traditionell</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/SS---5-Stars-15.jpg" alt="Portraitprojekt">
+          <img src="img/featured/IMG_9296.jpg" alt="Streetfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Stylized Portraits</h3>
+            <h3 data-i18n="cat.street">Street</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/SS---5-Stars-08.jpg" alt="Portraitprojekt">
+          <img src="img/featured/SS---5-Stars-15.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Stylized Portraits</h3>
+            <h3 data-i18n="cat.portraits.stylized">Stilisierte Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/pexels-samuel-seelig-5998373-28898037.jpg" alt="Portraitprojekt">
+          <img src="img/featured/SS---5-Stars-08.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Portraits</h3>
+            <h3 data-i18n="cat.portraits.stylized">Stilisierte Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/pexels-samuel-seelig-5998373-28898148.jpg" alt="Portraitprojekt">
+          <img src="img/featured/pexels-samuel-seelig-5998373-28898037.jpg" alt="Portraitfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Portraits</h3>
+            <h3 data-i18n="cat.portraits">Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_1401.jpg" alt="Eventprojekt">
+          <img src="img/featured/pexels-samuel-seelig-5998373-28898148.jpg" alt="Portraitfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Couple Portraits</h3>
+            <h3 data-i18n="cat.portraits">Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_1508.JPG" alt="Landschaftsprojekt">
+          <img src="img/featured/IMG_1401.jpg" alt="Paar-Portrait von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Nature</h3>
+            <h3 data-i18n="cat.couple">Paar-Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_1756-2.jpg" alt="Landschaftsprojekt">
+          <img src="img/featured/IMG_1508.JPG" alt="Naturfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Nature</h3>
+            <h3 data-i18n="cat.nature">Natur</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_2419.jpg" alt="Produktprojekt">
+          <img src="img/featured/IMG_1756-2.jpg" alt="Naturfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Diamond Weddings</h3>
+            <h3 data-i18n="cat.nature">Natur</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_2741.jpg" alt="Produktprojekt">
+          <img src="img/featured/IMG_2419.jpg" alt="Diamantene Hochzeit, fotografiert von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Weddings</h3>
+            <h3 data-i18n="cat.diamond">Diamantene Hochzeiten</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_3141.jpg" alt="Produktprojekt">
+          <img src="img/featured/IMG_2741.jpg" alt="Hochzeitsfotografie von Samuel Seelig" loading="lazy" decoding="async">
           <div class="masonry-item-overlay">
-            <h3>Weddings</h3>
+            <h3 data-i18n="cat.weddings">Hochzeiten</h3>
           </div>
         </div>
+        <div class="masonry-item">
+          <img src="img/featured/IMG_3141.jpg" alt="Hochzeitsfotografie von Samuel Seelig" loading="lazy" decoding="async">
+          <div class="masonry-item-overlay">
+            <h3 data-i18n="cat.weddings">Hochzeiten</h3>
+          </div>
+        </div>
+      </div>
+      <div class="cta-after-testimonials" style="margin-top: 3rem; text-align: center;">
+        <a href="gallery.html" class="cta-button" data-i18n="nav.gallery">Galerie</a>
       </div>
     </section>
 
     <!-- === SHOWREEL VIDEO SECTION === -->
     <section class="video-section">
       <div class="video-container">
-        <h2>Showreel</h2>
+        <h2 data-i18n="video.h2">Showreel</h2>
         <div class="video-wrapper">
           <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/7UgUcqfiaGU?si=title=0&byline=0&portrait=0" title="YouTube video player"
-            frameborder="0"
+            src="https://www.youtube.com/embed/7UgUcqfiaGU?si=title=0&byline=0&portrait=0" title="Showreel – Seelig Designs"
+            loading="lazy" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
@@ -175,46 +209,39 @@
     <!-- === TESTIMONIAL SLIDER SECTION === -->
     <section class="testimonial-section">
       <div class="testimonial-container">
-        <h2>What my customers have to say</h2>
+        <h2 data-i18n="testi.h2">Was meine Kunden sagen</h2>
         <div class="testimonial-slider">
 
           <!-- Slide 1 -->
           <div class="testimonial-slide active">
             <div class="testimonial-content">
-              <p class="quote">"The photos are absolutely wonderful, and we're incredibly happy and satisfied with them.
-                You did a fantastic job! We were particularly impressed by how you were almost invisible yet always in
-                the right place. The results truly speak for themselves. We'll happily recommend you, and we look
-                forward to the possibility of working with you again."</p>
-              <cite class="author">- Denise & Rinaldo</cite>
+              <p class="quote" data-i18n="testi.1.quote">Die Fotos sind absolut wunderschön.</p>
+              <cite class="author">- Denise &amp; Rinaldo</cite>
             </div>
             <div class="testimonial-image">
-              <img src="img/testi1.jpg" alt="Customerimage Denise & Rinaldo">
+              <img src="img/testi1.jpg" alt="Kundenfoto von Denise und Rinaldo" loading="lazy" decoding="async">
             </div>
           </div>
 
           <!-- Slide 2 -->
           <div class="testimonial-slide">
             <div class="testimonial-content">
-              <p class="quote">"He was the perfect choice for our business headshots and couple photos. Samuel made the
-                session feel effortless and captured both our professional and personal sides beautifully. We're
-                thrilled with how all the images turned out."</p>
-              <cite class="author">- Laura & Nico</cite>
+              <p class="quote" data-i18n="testi.2.quote">Er war die perfekte Wahl für unsere Fotos.</p>
+              <cite class="author">- Laura &amp; Nico</cite>
             </div>
             <div class="testimonial-image">
-              <img src="img/testi2.jpg" alt="Customerimage Laura & Nico">
+              <img src="img/testi2.jpg" alt="Kundenfoto von Laura und Nico" loading="lazy" decoding="async">
             </div>
           </div>
 
           <!-- Slide 3 -->
           <div class="testimonial-slide">
             <div class="testimonial-content">
-              <p class="quote">"Samuel’s calm presence was perfect for our 60th anniversary. He captured the spirit of
-                the day without being intrusive, creating a beautiful and heartfelt story in photos. We're so glad to
-                have these wonderful pictures to share with the rest of our family."</p>
-              <cite class="author">- Kristina & Reinhard</cite>
+              <p class="quote" data-i18n="testi.3.quote">Samuels ruhige Präsenz war perfekt für unseren Tag.</p>
+              <cite class="author">- Kristina &amp; Reinhard</cite>
             </div>
             <div class="testimonial-image">
-              <img src="img/testi3.jpg" alt="Customerimage Kristina & Reinhard">
+              <img src="img/testi3.jpg" alt="Kundenfoto von Kristina und Reinhard" loading="lazy" decoding="async">
             </div>
           </div>
 
@@ -224,54 +251,46 @@
           <button class="slider-btn next-btn" aria-label="Nächstes Testimonial">&rarr;</button>
         </div>
         <div class="cta-after-testimonials">
-          <p>Ready to write your own story with me?</p>
-          <a href="contact.html" class="cta-button">Get in touch</a>
+          <p data-i18n="cta.text">Bereit, deine eigene Geschichte mit mir zu schreiben?</p>
+          <a href="contact.html" class="cta-button" data-i18n="cta.button">Kontakt aufnehmen</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer innerhalb des body Tags platzieren -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="footer-container">
-
-      <!-- Linke Seite: Logo -->
       <div class="footer-logo">
-        <a href="#">
-          <!-- HINWEIS: Verwende hier dein Logo. Ein SVG wäre ideal. -->
+        <a href="index.html">
           <img src="img/Logo_blk.svg" alt="Seelig Designs Logo">
         </a>
       </div>
-
-      <!-- Mittlerer Teil: Footer-Navigation -->
       <nav class="footer-nav">
         <ul>
-          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/">Portfolio</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="imprint.html">Imprint</a></li>
-          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="gallery.html" data-i18n="footer.portfolio">Galerie</a></li>
+          <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
+          <li><a href="imprint.html" data-i18n="footer.imprint">Impressum</a></li>
+          <li><a href="privacy-policy.html" data-i18n="footer.privacy">Datenschutz</a></li>
         </ul>
       </nav>
-
-      <!-- Rechte Seite: Kontakt & Socials -->
       <div class="footer-contact">
         <a href="mailto:samuelseelig@gmail.com" aria-label="Email">
-          <img src="icons/email-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
+          <img src="icons/email-svgrepo-com.svg" alt="" class="footer-icon">
         </a>
-        <a href="tel:+49 1520 4664069" aria-label="Anrufen">
-          <img src="icons/phone-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
+        <a href="tel:+4915204664069" aria-label="Anrufen">
+          <img src="icons/phone-svgrepo-com.svg" alt="" class="footer-icon">
         </a>
-        <a href="https://wa.me/4915204664069" target="_blank" aria-label="WhatsApp">
-          <img src="icons/whatsapp-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
+        <a href="https://wa.me/4915204664069" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="icons/whatsapp-svgrepo-com.svg" alt="" class="footer-icon">
         </a>
-        <a href="https://www.instagram.com/seelig_designs/" target="_blank" aria-label="Instagram">
-          <img src="icons/instagram-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
+        <a href="https://www.instagram.com/seelig_designs/" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="icons/instagram-svgrepo-com.svg" alt="" class="footer-icon">
         </a>
-        <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" aria-label="Pexels">
-          <img src="icons/camera-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
+        <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" aria-label="Pexels">
+          <img src="icons/camera-svgrepo-com.svg" alt="" class="footer-icon">
         </a>
       </div>
-
     </div>
     <div class="footer-bottom-bar">
       <p>&copy; <span id="current-year">2025</span> Samuel Seelig</p>
@@ -282,14 +301,15 @@
   <div id="cookie-banner" class="cookie-banner" style="display: none;">
     <div class="glass-surface__content">
       <div class="cookie-content">
-        <p>This website uses only necessary cookies to ensure you get the best experience on my website.</p>
-        <button id="accept-cookies" class="cta-button">Got it!</button>
+        <p data-i18n="cookie.text">Diese Website verwendet nur notwendige Cookies, damit du das bestmögliche Erlebnis auf meiner Seite hast.</p>
+        <button id="accept-cookies" class="cta-button" data-i18n="cookie.accept">Verstanden!</button>
       </div>
     </div>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 
