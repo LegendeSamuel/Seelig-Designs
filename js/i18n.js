@@ -13,6 +13,7 @@
       // --- Navigation / Footer / Cookie ---
       'nav.home': 'Home',
       'nav.gallery': 'Galerie',
+      'nav.portfolio': 'Portfolio',
       'nav.about': 'Über mich',
       'nav.contact': 'Kontakt',
       'nav.lang': 'Sprache wechseln',
@@ -44,6 +45,8 @@
 
       // --- Home: Showreel & Testimonials ---
       'video.h2': 'Showreel',
+      'video.load': 'Video laden',
+      'video.consent': 'Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an Google übertragen. Details in der Datenschutzerklärung.',
       'testi.h2': 'Was meine Kunden sagen',
       'testi.1.quote': '„Die Fotos sind absolut wunderschön und wir sind unglaublich glücklich und zufrieden damit. Du hast einen fantastischen Job gemacht! Besonders beeindruckt hat uns, wie du fast unsichtbar und doch immer am richtigen Ort warst. Die Ergebnisse sprechen für sich. Wir empfehlen dich sehr gerne weiter und freuen uns auf eine mögliche erneute Zusammenarbeit."',
       'testi.2.quote': '„Er war die perfekte Wahl für unsere Business-Headshots und Paarfotos. Samuel hat das Shooting mühelos wirken lassen und beide Seiten – professionell und persönlich – wunderschön eingefangen. Wir sind begeistert, wie alle Bilder geworden sind."',
@@ -116,6 +119,7 @@
       // --- Navigation / Footer / Cookie ---
       'nav.home': 'Home',
       'nav.gallery': 'Gallery',
+      'nav.portfolio': 'Portfolio',
       'nav.about': 'About',
       'nav.contact': 'Contact',
       'nav.lang': 'Switch language',
@@ -147,6 +151,8 @@
 
       // --- Home: Showreel & Testimonials ---
       'video.h2': 'Showreel',
+      'video.load': 'Load video',
+      'video.consent': 'Clicking loads the video from YouTube. Data will be transmitted to Google. See the privacy policy for details.',
       'testi.h2': 'What my customers have to say',
       'testi.1.quote': '"The photos are absolutely wonderful, and we\'re incredibly happy and satisfied with them. You did a fantastic job! We were particularly impressed by how you were almost invisible yet always in the right place. The results truly speak for themselves. We\'ll happily recommend you, and we look forward to the possibility of working with you again."',
       'testi.2.quote': '"He was the perfect choice for our business headshots and couple photos. Samuel made the session feel effortless and captured both our professional and personal sides beautifully. We\'re thrilled with how all the images turned out."',

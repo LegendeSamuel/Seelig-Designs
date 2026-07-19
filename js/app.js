@@ -378,6 +378,24 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 
+  // --- YOUTUBE CLICK-TO-LOAD (privacy-friendly) ---
+  const ytFacade = document.getElementById('yt-facade');
+  if (ytFacade) {
+    ytFacade.addEventListener('click', () => {
+      const id = ytFacade.getAttribute('data-video-id');
+      const iframe = document.createElement('iframe');
+      iframe.width = '560';
+      iframe.height = '315';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = 'Showreel – Seelig Designs';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.allowFullscreen = true;
+      ytFacade.replaceWith(iframe);
+    });
+  }
+
   // --- DYNAMIC YEAR ---
   const yearSpan = document.getElementById('current-year');
   if (yearSpan) {

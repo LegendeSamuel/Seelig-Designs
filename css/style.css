@@ -1608,6 +1608,16 @@ body.mobile-menu-open .mobile-menu-button span::after {
   .lb-next { right: 0.5rem; }
 }
 
+/* Mid-desktop (993–1250px): 5 nav items + toggle + wordmark must not collide */
+@media (min-width: 993px) and (max-width: 1250px) {
+  .nav-left { left: 1.5rem; }
+  .nav-right { right: 1.5rem; gap: 0.6rem; }
+  .nav-left ul { gap: 1.4rem; }
+  .nav-left a { font-size: 1.15rem; }
+  .nav-right .logo { height: 2rem; }
+  .lang-toggle { font-size: 0.7rem; padding: 0.25rem 0.5rem; }
+}
+
 /* Language toggle: keep visible & compact on mobile without crowding the logo */
 @media (max-width: 992px) {
   nav { padding: 0 1.25rem; }
@@ -1746,4 +1756,81 @@ body.mobile-menu-open .mobile-menu-button span::after {
   }
   .about-stats { gap: 2rem; }
   .stat-number { font-size: 2.75rem; }
+}
+
+/* =========================================================================
+   YouTube click-to-load facade (privacy-friendly)
+   ========================================================================= */
+.yt-facade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  overflow: hidden;
+}
+
+.yt-facade::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: background-color 0.3s ease;
+}
+
+.yt-facade:hover::before {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.yt-play {
+  position: relative;
+  z-index: 1;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #F2A007;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.yt-facade:hover .yt-play {
+  transform: scale(1.1);
+}
+
+.yt-play::after {
+  content: '';
+  border-style: solid;
+  border-width: 0.9rem 0 0.9rem 1.5rem;
+  border-color: transparent transparent transparent #121212;
+  margin-left: 0.35rem;
+}
+
+.yt-consent {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  padding: 0 1.5rem;
+  color: #eaeaea;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .yt-play { width: 4rem; height: 4rem; }
+  .yt-play::after { border-width: 0.7rem 0 0.7rem 1.2rem; }
+  .yt-consent { font-size: 0.8rem; }
 }

@@ -55,6 +55,7 @@
         <ul>
           <li><a href="index.html" class="active-link" aria-current="page" data-i18n="nav.home">Home</a></li>
           <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
           <li><a href="about.html" data-i18n="nav.about">Über mich</a></li>
           <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
@@ -197,11 +198,13 @@
       <div class="video-container">
         <h2 data-i18n="video.h2">Showreel</h2>
         <div class="video-wrapper">
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/7UgUcqfiaGU?si=title=0&byline=0&portrait=0" title="Showreel – Seelig Designs"
-            loading="lazy" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <!-- Datenschutzfreundlicher Click-to-load: YouTube lädt erst nach Klick -->
+          <button type="button" class="yt-facade" id="yt-facade" data-video-id="7UgUcqfiaGU"
+            aria-label="Video laden und abspielen" data-i18n-attr="aria-label:video.load"
+            style="background-image: url('img/hero.jpg');">
+            <span class="yt-play" aria-hidden="true"></span>
+            <span class="yt-consent" data-i18n="video.consent">Mit dem Klick wird das Video von YouTube geladen. Dabei werden Daten an Google übertragen. Details in der Datenschutzerklärung.</span>
+          </button>
         </div>
       </div>
     </section>
@@ -269,6 +272,7 @@
       <nav class="footer-nav">
         <ul>
           <li><a href="gallery.html" data-i18n="footer.portfolio">Galerie</a></li>
+          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
           <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
           <li><a href="imprint.html" data-i18n="footer.imprint">Impressum</a></li>
           <li><a href="privacy-policy.html" data-i18n="footer.privacy">Datenschutz</a></li>

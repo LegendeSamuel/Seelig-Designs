@@ -13,15 +13,13 @@
 Diese drei Punkte sind echte DSGVO-Themen, die aus dem bestehenden Code
 kommen – bitte zuerst ansehen:
 
-### 🔴 YouTube-Showreel lädt sofort
-Auf der Startseite lädt das eingebettete YouTube-Video **beim Seitenaufruf**
-und stellt dabei eine Verbindung zu Google/DoubleClick her – **bevor** der
-Besucher irgendetwas bestätigt hat. Das ist ohne Einwilligung problematisch.
-- **Lösung A (empfohlen):** „Click-to-load"-Vorschau – erst ein Standbild
-  zeigen, das echte iframe lädt erst nach Klick. Bester Kompromiss aus Recht
-  und Performance. *→ Kann ich dir einbauen, sag einfach Bescheid.*
-- **Lösung B:** `youtube-nocookie.com` + Consent-Banner, das das Video erst
-  nach Zustimmung freigibt.
+### ✅ YouTube-Showreel – ERLEDIGT (Click-to-load eingebaut)
+Früher lud das eingebettete YouTube-Video **beim Seitenaufruf** und verband
+sich mit Google/DoubleClick, bevor der Besucher zugestimmt hatte.
+**Jetzt gelöst:** Es wird zunächst nur ein lokales Standbild mit Play-Button
+und Hinweistext gezeigt; das echte iframe (über `youtube-nocookie.com`) lädt
+**erst nach Klick**. Damit werden vor der aktiven Einwilligung keine Daten an
+Google übertragen – gut für Datenschutz *und* Ladezeit.
 
 ### 🟠 Adobe Fonts (Typekit) laden von US-Servern
 Die Schriften kommen über `use.typekit.net` von Adobe – dabei wird die
@@ -70,10 +68,10 @@ tatsächlichen Setup passen. Sie muss **alle** eingesetzten Dienste abdecken:
 - Aktuell speichert die Seite nur einen **technisch notwendigen** Wert im
   localStorage (`cookiesAccepted`) – dafür ist **keine Einwilligung** nötig,
   der Banner ist nur ein Hinweis.
-- **Aber:** Solange YouTube und Adobe Fonts **ohne** Zustimmung laden (Punkt 1),
-  bräuchtest du eigentlich ein echtes Opt-in **davor**. Wenn du Punkt 1 löst
-  (Click-to-load + Fonts selbst hosten), kommst du realistisch **ohne
-  Consent-Banner** aus – der einfachste und sauberste Weg für ein Portfolio.
+- **YouTube ist entschärft** (Click-to-load, siehe oben). Es bleibt nur noch
+  **Adobe Fonts**, das ohne Zustimmung von US-Servern lädt. Wenn du die Fonts
+  selbst hostest (Punkt 1), kommst du realistisch **ganz ohne Consent-Banner**
+  aus – der einfachste und sauberste Weg für ein Portfolio.
 - Kein Analytics ausgewählt → keine zusätzliche Consent-Pflicht dadurch. 👍
 
 ## 5. Auftragsverarbeitung (AVV / DPA)
