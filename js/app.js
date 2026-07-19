@@ -275,19 +275,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.querySelector('body');
 
   if (mobileMenuButton && navLeft) {
+    const setMenuState = (open) => {
+      navLeft.classList.toggle('mobile-menu-open', open);
+      body.classList.toggle('mobile-menu-open', open);
+      body.style.overflow = open ? 'hidden' : '';
+      mobileMenuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
     mobileMenuButton.addEventListener('click', () => {
-      navLeft.classList.toggle('mobile-menu-open');
-      body.classList.toggle('mobile-menu-open');
-      body.style.overflow = navLeft.classList.contains('mobile-menu-open') ? 'hidden' : '';
+      setMenuState(!navLeft.classList.contains('mobile-menu-open'));
     });
 
     // Menü schließen
     navLeft.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLeft.classList.remove('mobile-menu-open');
-        body.classList.remove('mobile-menu-open');
-        body.style.overflow = '';
-      });
+      link.addEventListener('click', () => setMenuState(false));
     });
 
     // --- INITIALIZE GLASS EFFECT FOR MOBILE MENU ---
