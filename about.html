@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://legendesamuel.github.io/Seelig-Designs/about.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.typekit.net/ixl2sxe.css">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="favicon.ico" type="image/png">
 </head>
 
@@ -65,7 +65,10 @@
       <!-- Intro: photo + story -->
       <div class="about-intro">
         <div class="about-portrait">
-          <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/profil.webp" type="image/webp">
+            <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="about-lead-text">
           <p class="about-lead" data-i18n="about.lead">Fotograf aus Leidenschaft. Ich halte fest, was sich nicht wiederholt.</p>

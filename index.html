@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://legendesamuel.github.io/Seelig-Designs/">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.typekit.net/ixl2sxe.css">
+  <link rel="preload" href="fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="favicon.ico" type="image/png">
   <script type="application/ld+json">
   {
@@ -93,7 +93,10 @@
     <section class="intro">
       <div class="intro-container">
         <div class="intro-image">
-          <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" class="profil" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/profil.webp" type="image/webp">
+            <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" class="profil" loading="lazy" decoding="async">
+          </picture>
         </div>
         <div class="intro-text">
           <h2 data-i18n="intro.h2">Wer ich bin</h2>
@@ -128,13 +131,19 @@
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/SS---5-Stars-15.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/featured/SS---5-Stars-15.webp" type="image/webp">
+            <img src="img/featured/SS---5-Stars-15.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
           <div class="masonry-item-overlay">
             <h3 data-i18n="cat.portraits.stylized">Stilisierte Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/SS---5-Stars-08.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/featured/SS---5-Stars-08.webp" type="image/webp">
+            <img src="img/featured/SS---5-Stars-08.jpg" alt="Stilisiertes Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
           <div class="masonry-item-overlay">
             <h3 data-i18n="cat.portraits.stylized">Stilisierte Portraits</h3>
           </div>
@@ -152,13 +161,19 @@
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_1401.jpg" alt="Paar-Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/featured/IMG_1401.webp" type="image/webp">
+            <img src="img/featured/IMG_1401.jpg" alt="Paar-Portrait von Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
           <div class="masonry-item-overlay">
             <h3 data-i18n="cat.couple">Paar-Portraits</h3>
           </div>
         </div>
         <div class="masonry-item">
-          <img src="img/featured/IMG_1508.JPG" alt="Naturfotografie von Samuel Seelig" loading="lazy" decoding="async">
+          <picture>
+            <source srcset="img/featured/IMG_1508.webp" type="image/webp">
+            <img src="img/featured/IMG_1508.JPG" alt="Naturfotografie von Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
           <div class="masonry-item-overlay">
             <h3 data-i18n="cat.nature">Natur</h3>
           </div>
