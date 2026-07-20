@@ -30,7 +30,7 @@ const HTML_FILE = 'gallery.html';
 const CONFIG = [
   { dir: 'Portraits',          en: 'Portraits' },
   { dir: 'Street',             en: 'Street' },
-  { dir: 'Landschaft & Natur', en: 'Landscape & Nature' },
+  { dir: 'Landschaft - Natur', en: 'Landscape & Nature' },
   { dir: 'Architektur',        en: 'Architecture' },
   { dir: 'Events',             en: 'Events' },
   { dir: 'Hochzeit',           en: 'Weddings' },
