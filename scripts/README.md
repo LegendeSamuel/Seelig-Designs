@@ -1,3 +1,38 @@
+# Galerie kuratieren (Ordner + ein Befehl)
+
+Die Galerie entsteht automatisch aus den Ordnern unter **`img/gallery/`**.
+Jeder Unterordner ist eine Kategorie (der Ordnername ist zugleich das
+deutsche Filter-Label):
+
+```
+img/gallery/
+  Portraits/      Street/       Landschaft/   Natur/
+  Architektur/    Events/       Cosplay/
+```
+
+**So änderst du, was gezeigt wird:**
+- **Bild anzeigen** → Datei in den passenden Kategorie-Ordner legen
+- **Bild ausblenden** → Datei aus dem Ordner nehmen (oder löschen)
+- **Kategorie hinzufügen** → neuen Ordner unter `img/gallery/` anlegen
+- **Kategorie entfernen** → Ordner leeren oder löschen
+- **Reihenfolge / englische Namen** → in `scripts/build-gallery.mjs` oben in
+  `CONFIG` anpassen (ohne Eintrag erscheint ein neuer Ordner am Ende; dann ist
+  der englische = deutsche Name)
+
+**Danach neu bauen:**
+
+```bash
+npm run gallery     # schreibt Filter + Bildraster neu in gallery.html
+npm run images      # (optional) WebP für neu hinzugekommene Bilder erzeugen
+```
+
+Zum Schluss committen: `git add -A && git commit -m "Galerie aktualisiert"`.
+
+> Die Startseiten-Highlights liegen separat in `img/featured/` und werden von
+> diesem Schritt nicht verändert.
+
+---
+
 # Bild-Optimierung (WebP / AVIF)
 
 Deine Fotos liegen aktuell als große JPGs vor. WebP spart typischerweise
