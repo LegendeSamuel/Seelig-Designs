@@ -1,61 +1,49 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 
 <head>
   <meta charset="utf-8">
-  <title>Page Not Found</title>
+  <title>Seite nicht gefunden – Seelig Designs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="Fonts/SofiaPro/woff2/SofiaPro-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="favicon.ico" type="image/png">
   <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
+    .error-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      width: 100%;
+      padding: 2rem;
+      gap: 1.5rem;
     }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
+    .error-page .code {
+      font-size: clamp(5rem, 20vw, 11rem);
+      font-weight: 200;
+      color: #F2A007;
+      line-height: 1;
     }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
+    .error-page h1 { text-transform: none; }
+    .error-page p { max-width: 460px; color: #d0d0d0; }
+    .error-links { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 1rem; }
+    .error-logo { height: 2.5rem; margin-bottom: 1rem; }
   </style>
 </head>
 
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+  <main class="error-page">
+    <img src="img/Left_Logo_Name_wht.svg" alt="Seelig Designs Logo" class="error-logo">
+    <div class="code">404</div>
+    <h1>Diese Seite gibt es nicht.</h1>
+    <p>Der gesuchte Moment ist wohl davongeflogen. Kehr zurück zur Startseite oder wirf einen Blick in die Galerie.</p>
+    <div class="error-links">
+      <a href="index.html" class="cta-button">Startseite</a>
+      <a href="gallery.html" class="cta-button">Galerie</a>
+    </div>
+  </main>
 </body>
 
 </html>

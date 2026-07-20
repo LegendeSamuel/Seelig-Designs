@@ -275,19 +275,20 @@ document.addEventListener('DOMContentLoaded', function () {
   const body = document.querySelector('body');
 
   if (mobileMenuButton && navLeft) {
+    const setMenuState = (open) => {
+      navLeft.classList.toggle('mobile-menu-open', open);
+      body.classList.toggle('mobile-menu-open', open);
+      body.style.overflow = open ? 'hidden' : '';
+      mobileMenuButton.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+
     mobileMenuButton.addEventListener('click', () => {
-      navLeft.classList.toggle('mobile-menu-open');
-      body.classList.toggle('mobile-menu-open');
-      body.style.overflow = navLeft.classList.contains('mobile-menu-open') ? 'hidden' : '';
+      setMenuState(!navLeft.classList.contains('mobile-menu-open'));
     });
 
     // Menü schließen
     navLeft.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLeft.classList.remove('mobile-menu-open');
-        body.classList.remove('mobile-menu-open');
-        body.style.overflow = '';
-      });
+      link.addEventListener('click', () => setMenuState(false));
     });
 
     // --- INITIALIZE GLASS EFFECT FOR MOBILE MENU ---
@@ -376,6 +377,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+
+  // --- YOUTUBE CLICK-TO-LOAD (privacy-friendly) ---
+  const ytFacade = document.getElementById('yt-facade');
+  if (ytFacade) {
+    ytFacade.addEventListener('click', () => {
+      const id = ytFacade.getAttribute('data-video-id');
+      const iframe = document.createElement('iframe');
+      iframe.width = '560';
+      iframe.height = '315';
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = 'Showreel – Seelig Designs';
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      iframe.allowFullscreen = true;
+      ytFacade.replaceWith(iframe);
+    });
+  }
 
   // --- DYNAMIC YEAR ---
   const yearSpan = document.getElementById('current-year');
