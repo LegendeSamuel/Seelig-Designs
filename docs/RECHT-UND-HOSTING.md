@@ -21,13 +21,14 @@ und Hinweistext gezeigt; das echte iframe (über `youtube-nocookie.com`) lädt
 **erst nach Klick**. Damit werden vor der aktiven Einwilligung keine Daten an
 Google übertragen – gut für Datenschutz *und* Ladezeit.
 
-### 🟠 Adobe Fonts (Typekit) laden von US-Servern
-Die Schriften kommen über `use.typekit.net` von Adobe – dabei wird die
-IP-Adresse deiner Besucher in die USA übertragen.
-- **Lösung:** Schriften **selbst hosten** (lokal ausliefern) statt vom
-  Adobe-CDN. Rechtlich sauberer und schneller. Achtung: Lizenzbedingungen von
-  Adobe Fonts fürs Self-Hosting prüfen – ggf. auf eine frei lizenzierte
-  Alternative (Google-Fonts-lokal, Fontsource) ausweichen.
+### ✅ Schriften – ERLEDIGT (Sofia Pro selbst gehostet)
+Früher kamen die Schriften über `use.typekit.net` von Adobe (IP-Übertragung
+in die USA). **Jetzt gelöst:** Sofia Pro wird lokal aus `Fonts/SofiaPro/`
+ausgeliefert – kein externer Font-Request mehr. Der Typekit-Link wurde auf
+allen Seiten entfernt.
+- **Deine Aufgabe:** stelle sicher, dass du eine gültige **Webfont-Lizenz** für
+  Sofia Pro besitzt (kommerzielle Schrift; das Selbst-Hosten muss lizenziert
+  sein).
 
 ### 🟠 Kontaktformular über Formspree (USA)
 `contact.html` schickt das Formular an `formspree.io` – ein US-Dienst, der die
@@ -58,7 +59,8 @@ tatsächlichen Setup passen. Sie muss **alle** eingesetzten Dienste abdecken:
 - [ ] **Formspree** (Kontaktformular) nennen.
 - [ ] **YouTube** (Showreel) nennen – ist bereits enthalten, an die gewählte
       Lösung aus Punkt 1 anpassen.
-- [ ] **Adobe Fonts** nennen – oder streichen, falls du Fonts selbst hostest.
+- [x] **Schriften**: selbst gehostet (Sofia Pro) – kein externer Font-Dienst
+      mehr zu nennen. In der Datenschutzerklärung ist das bereits so vermerkt.
 - [ ] **WhatsApp**-Link (Klick führt zu Meta/WhatsApp) nennen.
 - [ ] Betroffenenrechte, Rechtsgrundlagen (Art. 6 DSGVO), Kontakt der
       verantwortlichen Stelle.
@@ -68,10 +70,10 @@ tatsächlichen Setup passen. Sie muss **alle** eingesetzten Dienste abdecken:
 - Aktuell speichert die Seite nur einen **technisch notwendigen** Wert im
   localStorage (`cookiesAccepted`) – dafür ist **keine Einwilligung** nötig,
   der Banner ist nur ein Hinweis.
-- **YouTube ist entschärft** (Click-to-load, siehe oben). Es bleibt nur noch
-  **Adobe Fonts**, das ohne Zustimmung von US-Servern lädt. Wenn du die Fonts
-  selbst hostest (Punkt 1), kommst du realistisch **ganz ohne Consent-Banner**
-  aus – der einfachste und sauberste Weg für ein Portfolio.
+- **YouTube ist entschärft** (Click-to-load) **und die Schriften sind selbst
+  gehostet** – es lädt also **nichts** mehr ohne Zustimmung von externen
+  Servern. Damit kommst du realistisch **ganz ohne Consent-Banner** aus; der
+  vorhandene Hinweis ist rein informativ und könnte sogar entfallen.
 - Kein Analytics ausgewählt → keine zusätzliche Consent-Pflicht dadurch. 👍
 
 ## 5. Auftragsverarbeitung (AVV / DPA)
