@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Seelig Designs</title>
+    <title>Datenschutz – Seelig Designs</title>
+    <meta name="description" content="Datenschutzerklärung von Seelig Designs – Samuel Seelig. Informationen zur Verarbeitung personenbezogener Daten gemäß DSGVO.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://legendesamuel.github.io/Seelig-Designs/privacy-policy.html">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ixl2sxe.css">
+    <link rel="preload" href="Fonts/SofiaPro/woff2/SofiaPro-Light.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="icon" href="favicon.ico" type="image/png">
     <style>
         /* Specific styles for text-heavy pages */
@@ -66,105 +69,133 @@
         <nav>
             <div class="nav-left">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank">Portfolio</a>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+                    <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+                    <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="about.html" data-i18n="nav.about">Über mich</a></li>
+                    <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
                 </ul>
             </div>
             <div class="nav-right">
-                <a href="index.html">
+                <button class="lang-toggle" type="button" aria-label="Sprache wechseln" data-i18n-attr="aria-label:nav.lang">
+                    <span data-lang="de">DE</span><span class="lang-sep">/</span><span data-lang="en">EN</span>
+                </button>
+                <a href="index.html" aria-label="Seelig Designs Home">
                     <img src="img/Left_Logo_Name_wht.svg" alt="Seelig Designs Logo" class="logo">
                 </a>
             </div>
-            <button class="mobile-menu-button">
+            <button class="mobile-menu-button" aria-label="Menü öffnen" aria-expanded="false">
                 <span></span>
             </button>
         </nav>
     </header>
 
+    <!-- Hero -->
+    <section class="hero-child">
+        <div class="hero-child-background">
+            <video autoplay muted loop playsinline poster="img/hero.jpg">
+                <source src="img/hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hero-child-content">
+            <h1>Datenschutz</h1>
+        </div>
+    </section>
+
     <!-- Main Content -->
-    <main class="page-content" style="margin-top: 7rem; min-height: 80vh;">
+    <main class="page-content" style="min-height: 60vh;">
         <section class="policy-content">
-            <h1>Privacy Policy</h1>
 
-            <p><strong>Last updated: January 2026</strong></p>
+            <p class="legal-note"><strong>Hinweis:</strong> Diese Datenschutzerklärung ist ein an
+                dein tatsächliches Setup (GitHub&nbsp;Pages, Formspree, YouTube, selbst gehostete
+                Schriften) angepasstes Gerüst. Bitte vor dem Livegang mit einem geprüften Generator
+                (z.&nbsp;B. eRecht24) finalisieren und im Zweifel anwaltlich prüfen lassen.</p>
 
-            <h2>1. Overview</h2>
-            <p>Data protection is of a particularly high priority for us. The processing of personal data, such as the
-                IP address, is always in line with the General Data Protection Regulation (GDPR). By using this website,
-                you agree to the collection and use of information in accordance with this policy.</p>
+            <p><strong>Stand: Juli 2026</strong></p>
 
-            <h2>2. Responsible Body</h2>
-            <p>Responsible for data processing on this website:</p>
+            <h2>1. Verantwortlicher</h2>
+            <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist:</p>
             <p>
                 <strong>Samuel Seelig</strong><br>
-                Email: samuelseelig@gmail.com<br>
-                Phone: +49 1520 4664069
+                Friedrich-Ebert-Straße 34, 64646 Heppenheim<br>
+                E-Mail: samuelseelig@gmail.com<br>
+                Telefon: +49 1520 4664069
             </p>
 
-            <h2>3. Collection of Data</h2>
-            <h3>Log Files</h3>
-            <p>The website provider automatically collects and stores information in so-called server log files, which
-                your browser automatically transmits to us. These are:</p>
+            <h2>2. Hosting (GitHub Pages)</h2>
+            <p>Diese Website wird bei GitHub Pages gehostet, einem Dienst der GitHub, Inc., 88 Colin
+                P. Kelly Jr. Street, San Francisco, CA 94107, USA. Beim Aufruf der Seiten verarbeitet
+                GitHub technisch notwendige Zugriffsdaten (u.&nbsp;a. deine IP-Adresse), um die
+                Auslieferung der Website zu ermöglichen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f
+                DSGVO (berechtigtes Interesse an einer sicheren und effizienten Bereitstellung).
+                Da GitHub ein US-Anbieter ist, kann eine Datenübermittlung in die USA erfolgen.
+                <span class="todo">[Zu prüfen: Abschluss eines Auftragsverarbeitungsvertrags/DPA mit
+                GitHub und Angabe der Garantien für den Drittlandtransfer.]</span></p>
+
+            <h2>3. Server-Logfiles</h2>
+            <p>Der Hosting-Anbieter erhebt und speichert automatisch Informationen in sogenannten
+                Server-Logfiles, die dein Browser automatisch übermittelt. Das sind in der Regel:</p>
             <ul>
-                <li>Browser type and browser version</li>
-                <li>Operating system used</li>
-                <li>Referrer URL</li>
-                <li>Hostname of the accessing computer</li>
-                <li>Time of the server request</li>
-                <li>IP address</li>
+                <li>Browsertyp und Browserversion</li>
+                <li>verwendetes Betriebssystem</li>
+                <li>Referrer-URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
             </ul>
-            <p>This data is not merged with other data sources. This data is recorded on the basis of Art. 6 Para. 1
-                lit. f GDPR. The website operator has a legitimate interest in the technically error-free presentation
-                and optimization of his website – the server log files must be recorded for this purpose.</p>
+            <p>Eine Zusammenführung dieser Daten mit anderen Datenquellen findet nicht statt.
+                Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an der
+                technisch fehlerfreien Darstellung und Sicherheit der Website).</p>
 
-            <h2>4. Cookies and Local Storage</h2>
-            <p>This website uses minimal local storage to enhance user experience.</p>
-            <h3>Consent Management</h3>
-            <p>We use the browser's <strong>Local Storage</strong> to save your decision regarding the cookie banner
-                (`cookiesAccepted`). This ensures that the banner does not appear every time you visit the site. This
-                data is stored locally on your device and is not transferred to our servers.</p>
+            <h2>4. Cookies und lokaler Speicher</h2>
+            <p>Diese Website setzt keine Marketing- oder Tracking-Cookies. Es wird lediglich ein
+                technisch notwendiger Wert im <strong>Local Storage</strong> deines Browsers
+                gespeichert (<code>cookiesAccepted</code>), damit der Cookie-Hinweis nicht bei jedem
+                Besuch erneut erscheint. Diese Information verbleibt auf deinem Gerät und wird nicht
+                an einen Server übertragen. Rechtsgrundlage: § 25 Abs. 2 TDDDG (technisch
+                erforderliche Speicherung).</p>
 
-            <h2>5. Third-Party Services</h2>
+            <h2>5. Kontaktaufnahme</h2>
+            <h3>Kontaktformular (Formspree)</h3>
+            <p>Das Kontaktformular wird über den Dienst Formspree (Formspree, Inc., USA)
+                abgewickelt. Wenn du das Formular absendest, werden die von dir eingegebenen Daten
+                (Name, E-Mail-Adresse, Betreff, Nachricht) über Formspree verarbeitet und an mich
+                weitergeleitet, um deine Anfrage zu beantworten. Rechtsgrundlage ist Art. 6 Abs. 1
+                lit. b DSGVO (vorvertragliche Maßnahmen) bzw. lit. f DSGVO (berechtigtes Interesse
+                an der Bearbeitung von Anfragen).
+                <span class="todo">[Zu prüfen: Auftragsverarbeitungsvertrag mit Formspree und
+                Garantien für den Drittlandtransfer in die USA.]</span></p>
+            <h3>E-Mail, Telefon, WhatsApp</h3>
+            <p>Wenn du mich per E-Mail, Telefon oder über den WhatsApp-Link kontaktierst, werden
+                deine Angaben zur Bearbeitung der Anfrage verarbeitet. Beim WhatsApp-Link erfolgt die
+                Kommunikation über die WhatsApp Ireland Ltd.; es gelten deren Datenschutzbestimmungen.
+                <span class="todo">[Zu prüfen/ergänzen, falls WhatsApp aktiv genutzt wird.]</span></p>
 
-            <h3>YouTube</h3>
-            <p>Our website uses plugins from the YouTube site operated by Google. The operator of the pages is Google
-                Ireland Limited ("Google"), Gordon House, Barrow Street, Dublin 4, Ireland.</p>
-            <p>We use YouTube in the expanded data protection mode. According to YouTube, this mode means that YouTube
-                does not store any information about visitors to this website before they watch the video. However, the
-                transfer of data to YouTube partners is not necessarily ruled out by the expanded data protection mode.
-                So regardless of whether you are watching a video, YouTube connects to the Google DoubleClick network.
-            </p>
-            <p>As soon as you start a YouTube video on our website, a connection to the YouTube servers is established.
-                The YouTube server is informed which of our pages you have visited. If you are logged into your YouTube
-                account, you enable YouTube to assign your surfing behavior directly to your personal profile. You can
-                prevent this by logging out of your YouTube account.</p>
-            <p>Furthermore, YouTube can save various cookies on your end device after starting a video or use comparable
-                recognition technologies (e.g. device fingerprinting). In this way, YouTube can obtain information about
-                visitors to this website. This information is used i.a. to collect video statistics, improve usability
-                and prevent fraud attempts.</p>
-            <p>For more information on handling user data, please see YouTube's data privacy declaration at: <a
-                    href="https://policies.google.com/privacy?hl=en"
-                    target="_blank">https://policies.google.com/privacy</a>.</p>
+            <h2>6. Eingebundene Dienste Dritter</h2>
+            <h3>YouTube (Showreel, „Klick-zum-Laden")</h3>
+            <p>Auf der Startseite ist ein Video von YouTube (Google Ireland Limited, Gordon House,
+                Barrow Street, Dublin 4, Irland) eingebunden. Das Video lädt <strong>erst nach einem
+                aktiven Klick</strong> von dir – vorher wird keine Verbindung zu YouTube/Google
+                hergestellt und es werden keine Daten übertragen. Klickst du auf das Vorschaubild,
+                wird das Video über <code>youtube-nocookie.com</code> geladen; dabei stellt dein
+                Browser eine Verbindung zu den Servern von Google her und übermittelt u.&nbsp;a. deine
+                IP-Adresse. Rechtsgrundlage ist deine Einwilligung durch den Klick (Art. 6 Abs. 1
+                lit. a DSGVO). Weitere Informationen: <a href="https://policies.google.com/privacy"
+                    target="_blank" rel="noopener">https://policies.google.com/privacy</a>.</p>
 
-            <h3>Adobe Fonts (Typekit)</h3>
-            <p>This website uses web fonts from Adobe for the uniform representation of fonts. The provider is Adobe
-                Systems Incorporated, 345 Park Avenue, San Jose, CA 95110-2704, USA (Adobe).</p>
-            <p>When you call up a page, your browser loads the required web fonts directly from Adobe so that they can
-                be displayed correctly on your device. Your browser connects to Adobe's servers. This gives Adobe
-                knowledge that your IP address was used to access this website. Adobe Fonts are used in the interest of
-                a uniform and appealing presentation of our online offers. This represents a legitimate interest within
-                the meaning of Art. 6 Para. 1 lit. f GDPR.</p>
-            <p>For more information on Adobe Fonts, please visit: <a
-                    href="https://www.adobe.com/privacy/policies/adobe-fonts.html"
-                    target="_blank">https://www.adobe.com/privacy/policies/adobe-fonts.html</a>.</p>
+            <h3>Schriftarten (selbst gehostet)</h3>
+            <p>Die verwendete Schriftart wird lokal von diesem Server ausgeliefert. Es findet
+                <strong>keine</strong> Verbindung zu externen Font-Anbietern (z.&nbsp;B. Google Fonts
+                oder Adobe Fonts) statt; es werden dabei keine Daten an Dritte übertragen.</p>
 
-            <h2>6. Your Rights</h2>
-            <p>You have the right to request information about your stored personal data, its origin and recipients and
-                the purpose of data processing at any time free of charge. You also have the right to have this data
-                corrected or deleted. You can contact us at any time at the address given in the imprint if you have any
-                further questions on the subject of personal data.</p>
+            <h2>7. Deine Rechte</h2>
+            <p>Du hast jederzeit das Recht auf unentgeltliche Auskunft über deine gespeicherten
+                personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der
+                Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten. Ebenso
+                stehen dir das Recht auf Einschränkung der Verarbeitung, ein Widerspruchsrecht und das
+                Recht auf Datenübertragbarkeit zu. Zudem hast du das Recht, dich bei einer
+                Aufsichtsbehörde zu beschweren. Für Fragen zum Thema Datenschutz kannst du mich
+                jederzeit unter den im Impressum angegebenen Kontaktdaten erreichen.</p>
 
         </section>
     </main>
@@ -178,24 +209,24 @@
             </div>
             <nav class="footer-nav">
                 <ul>
-                    <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank">Portfolio</a>
-                    </li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="imprint.html">Imprint</a></li>
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="gallery.html" data-i18n="footer.portfolio">Galerie</a></li>
+                    <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
+                    <li><a href="imprint.html" data-i18n="footer.imprint">Impressum</a></li>
+                    <li><a href="privacy-policy.html" data-i18n="footer.privacy">Datenschutz</a></li>
                 </ul>
             </nav>
             <div class="footer-contact">
                 <a href="mailto:samuelseelig@gmail.com" aria-label="Email"><img src="icons/email-svgrepo-com.svg"
-                        alt="Email Icon" class="footer-icon"></a>
-                <a href="tel:+49 1520 4664069" aria-label="Anrufen"><img src="icons/phone-svgrepo-com.svg"
-                        alt="Email Icon" class="footer-icon"></a>
-                <a href="https://wa.me/4915204664069" target="_blank" aria-label="WhatsApp"><img
-                        src="icons/whatsapp-svgrepo-com.svg" alt="Email Icon" class="footer-icon"></a>
-                <a href="https://www.instagram.com/seelig_designs/" target="_blank" aria-label="Instagram"><img
-                        src="icons/instagram-svgrepo-com.svg" alt="Email Icon" class="footer-icon"></a>
-                <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" aria-label="Pexels"><img
-                        src="icons/camera-svgrepo-com.svg" alt="Email Icon" class="footer-icon"></a>
+                        alt="" class="footer-icon"></a>
+                <a href="tel:+4915204664069" aria-label="Anrufen"><img src="icons/phone-svgrepo-com.svg"
+                        alt="" class="footer-icon"></a>
+                <a href="https://wa.me/4915204664069" target="_blank" rel="noopener" aria-label="WhatsApp"><img
+                        src="icons/whatsapp-svgrepo-com.svg" alt="" class="footer-icon"></a>
+                <a href="https://www.instagram.com/seelig_designs/" target="_blank" rel="noopener" aria-label="Instagram"><img
+                        src="icons/instagram-svgrepo-com.svg" alt="" class="footer-icon"></a>
+                <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" aria-label="Pexels"><img
+                        src="icons/camera-svgrepo-com.svg" alt="" class="footer-icon"></a>
             </div>
         </div>
         <div class="footer-bottom-bar">
@@ -203,6 +234,7 @@
         </div>
     </footer>
 
+    <script src="js/i18n.js"></script>
     <script src="js/app.js"></script>
 </body>
 
