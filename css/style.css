@@ -1676,7 +1676,7 @@ body.mobile-menu-open .mobile-menu-button span::after {
 .about-portrait img {
   width: clamp(200px, 28vw, 300px);
   height: clamp(200px, 28vw, 300px);
-  border-radius: 20px;
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid #F2A007;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
