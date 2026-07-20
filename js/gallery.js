@@ -12,6 +12,20 @@
     const filterBtns = Array.from(document.querySelectorAll('.filter-btn'));
     const emptyMsg = document.getElementById('gallery-empty');
 
+    // Filter labels are folder-driven (data-de / data-en), not from the i18n
+    // dictionary — keep them in sync with the current language.
+    function updateFilterLabels(lang) {
+      filterBtns.forEach(function (b) {
+        const de = b.getAttribute('data-de');
+        const en = b.getAttribute('data-en');
+        if (de || en) b.textContent = (lang === 'en') ? (en || de) : (de || en);
+      });
+    }
+    updateFilterLabels((window.SDi18n && window.SDi18n.get) ? window.SDi18n.get() : 'de');
+    document.addEventListener('langchange', function (e) {
+      updateFilterLabels(e.detail && e.detail.lang);
+    });
+
     // --- Filtering ---
     function applyFilter(filter) {
       let visibleCount = 0;
