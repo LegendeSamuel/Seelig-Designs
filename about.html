@@ -4,104 +4,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seelig Designs</title>
+  <title>Über mich – Seelig Designs | Samuel Seelig</title>
+  <meta name="description" content="Über Samuel Seelig – Fotograf aus Leidenschaft. Meine Geschichte, mein Ansatz und was ich fotografiere: Hochzeiten, Portraits, Events, Natur und mehr.">
+  <link rel="canonical" href="https://legendesamuel.github.io/Seelig-Designs/about.html">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Über mich – Seelig Designs">
+  <meta property="og:description" content="Samuel Seelig – Fotograf aus Leidenschaft. Ich halte fest, was sich nicht wiederholt.">
+  <meta property="og:image" content="https://legendesamuel.github.io/Seelig-Designs/img/profil.jpg">
+  <meta property="og:url" content="https://legendesamuel.github.io/Seelig-Designs/about.html">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://use.typekit.net/ixl2sxe.css">
+  <link rel="preload" href="Fonts/SofiaPro/woff2/SofiaPro-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="icon" href="favicon.ico" type="image/png">
 </head>
 
 <body>
-<!-- Navigation -->
-<header>
-  <nav>
-    <div class="nav-left">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </div>
-    <div class="nav-right">
-      <img src="img/Left_Logo_Name_wht.svg" alt="Logo" class="logo">
-    </div>
-    <button class="mobile-menu-button">
-      <span></span>
-    </button>
-  </nav>
-</header>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <div class="nav-left">
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="about.html" class="active-link" aria-current="page" data-i18n="nav.about">Über mich</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <button class="lang-toggle" type="button" aria-label="Sprache wechseln" data-i18n-attr="aria-label:nav.lang">
+          <span data-lang="de">DE</span><span class="lang-sep">/</span><span data-lang="en">EN</span>
+        </button>
+        <a href="index.html" aria-label="Seelig Designs Home">
+          <img src="img/Left_Logo_Name_wht.svg" alt="Seelig Designs Logo" class="logo">
+        </a>
+      </div>
+      <button class="mobile-menu-button" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span>
+      </button>
+    </nav>
+  </header>
 
-<!-- Hero-Bereich -->
-<section class="hero-child">
-  <div class="hero-child-background">
-    <video autoplay muted loop playsinline>
-      <source src="img/hero.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
-  <div class="hero-child-content">
-    <h1>About.</h1>
-  </div>
-</section>
-
-<!-- Main content starts here -->
-<main class="page-content">
-     <!-- About Section -->
-  <section class="about-section">
-   
+  <!-- Hero -->
+  <section class="hero-child">
+    <div class="hero-child-background">
+      <video autoplay muted loop playsinline poster="img/hero.jpg">
+        <source src="img/hero.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="hero-child-content">
+      <h1 data-i18n="about.title">Über mich</h1>
+    </div>
   </section>
 
-</main>
+  <!-- Main content -->
+  <main class="page-content">
+    <section class="about-section">
 
-<!-- Footer innerhalb des body Tags platzieren -->
-<footer class="site-footer">
-  <div class="footer-container">
+      <!-- Intro: photo + story -->
+      <div class="about-intro">
+        <div class="about-portrait">
+          <picture>
+            <source srcset="img/profil.webp" type="image/webp">
+            <img src="img/profil.jpg" alt="Portrait des Fotografen Samuel Seelig" loading="lazy" decoding="async">
+          </picture>
+        </div>
+        <div class="about-lead-text">
+          <p class="about-lead" data-i18n="about.lead">Fotograf aus Leidenschaft. Ich halte fest, was sich nicht wiederholt.</p>
+          <h2 data-i18n="about.story.h2">Meine Geschichte</h2>
+          <p data-i18n="about.story.p1">Alles begann mit einem einzigen Moment.</p>
+          <p data-i18n="about.story.p2">Mein Leitspruch begleitet mich seit der Schulzeit.</p>
+        </div>
+      </div>
 
-    <!-- Linke Seite: Logo -->
-    <div class="footer-logo">
-      <a href="#">
-        <!-- HINWEIS: Verwende hier dein Logo. Ein SVG wäre ideal. -->
-        <img src="img/Logo_blk.svg" alt="Seelig Designs Logo">
-      </a>
+      <!-- Approach -->
+      <div class="about-block">
+        <h2 data-i18n="about.approach.h2">Mein Ansatz</h2>
+        <p data-i18n="about.approach.p">Ob Hochzeit, Event, Portrait oder Landschaft – ich bleibe im Hintergrund und lasse die Momente für sich sprechen.</p>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats">
+        <div class="stat">
+          <span class="stat-number">6+</span>
+          <span class="stat-label" data-i18n="about.stats.years">Jahre Erfahrung</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">100+</span>
+          <span class="stat-label" data-i18n="about.stats.shoots">Shootings</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">8</span>
+          <span class="stat-label" data-i18n="about.stats.categories">Genres</span>
+        </div>
+      </div>
+
+      <!-- Services -->
+      <div class="about-block">
+        <h2 data-i18n="about.services.h2">Was ich fotografiere</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <h3 data-i18n="about.services.weddings.h3">Hochzeiten &amp; Feiern</h3>
+            <p data-i18n="about.services.weddings.p">Ehrliche, unaufdringliche Reportage eurer besonderen Tage.</p>
+          </div>
+          <div class="service-card">
+            <h3 data-i18n="about.services.portraits.h3">Portraits</h3>
+            <p data-i18n="about.services.portraits.p">Business-Headshots, Paar- und stilisierte Portraits.</p>
+          </div>
+          <div class="service-card">
+            <h3 data-i18n="about.services.events.h3">Events</h3>
+            <p data-i18n="about.services.events.p">Conventions, Straßenfeste und Feiern voller Atmosphäre.</p>
+          </div>
+          <div class="service-card">
+            <h3 data-i18n="about.services.nature.h3">Natur &amp; Landschaft</h3>
+            <p data-i18n="about.services.nature.p">Die stille Schönheit der Welt um uns herum.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-after-testimonials about-cta">
+        <p data-i18n="about.cta.text">Lust auf gemeinsame Bilder?</p>
+        <a href="contact.html" class="cta-button" data-i18n="about.cta.button">Lass uns reden</a>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="img/Logo_blk.svg" alt="Seelig Designs Logo"></a>
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="gallery.html" data-i18n="footer.portfolio">Galerie</a></li>
+          <li><a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" data-i18n="nav.portfolio">Portfolio</a></li>
+          <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
+          <li><a href="imprint.html" data-i18n="footer.imprint">Impressum</a></li>
+          <li><a href="privacy-policy.html" data-i18n="footer.privacy">Datenschutz</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <a href="mailto:samuelseelig@gmail.com" aria-label="Email"><img src="icons/email-svgrepo-com.svg" alt="" class="footer-icon"></a>
+        <a href="tel:+4915204664069" aria-label="Anrufen"><img src="icons/phone-svgrepo-com.svg" alt="" class="footer-icon"></a>
+        <a href="https://wa.me/4915204664069" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="icons/whatsapp-svgrepo-com.svg" alt="" class="footer-icon"></a>
+        <a href="https://www.instagram.com/seelig_designs/" target="_blank" rel="noopener" aria-label="Instagram"><img src="icons/instagram-svgrepo-com.svg" alt="" class="footer-icon"></a>
+        <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" rel="noopener" aria-label="Pexels"><img src="icons/camera-svgrepo-com.svg" alt="" class="footer-icon"></a>
+      </div>
     </div>
-
-    <!-- Mittlerer Teil: Footer-Navigation -->
-    <nav class="footer-nav">
-      <ul>
-        <li><a href="#">Portfolio</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a href="#">Imprint</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-      </ul>
-    </nav>
-
-    <!-- Rechte Seite: Kontakt & Socials -->
-    <div class="footer-contact">
-      <a href="mailto:samuelseelig@gmail.com" aria-label="Email">
-        <img src="icons/email-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
-      </a>
-      <a href="tel:+49 1520 4664069" aria-label="Anrufen">
-        <img src="icons/phone-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
-      </a>
-      <a href="https://wa.me/4915204664069" target="_blank" aria-label="WhatsApp">
-        <img src="icons/whatsapp-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
-      </a>
-      <a href="https://www.instagram.com/seelig_designs/" target="_blank" aria-label="Instagram">
-        <img src="icons/instagram-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
-      </a>
-      <a href="https://www.pexels.com/de-de/@samuel-seelig-5998373/" target="_blank" aria-label="Pexels">
-        <img src="icons/camera-svgrepo-com.svg" alt="Email Icon" class="footer-icon">
-      </a>
+    <div class="footer-bottom-bar">
+      <p>&copy; <span id="current-year">2025</span> Samuel Seelig</p>
     </div>
+  </footer>
 
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div class="glass-surface__content">
+      <div class="cookie-content">
+        <p data-i18n="cookie.text">Diese Website verwendet nur notwendige Cookies, damit du das bestmögliche Erlebnis auf meiner Seite hast.</p>
+        <button id="accept-cookies" class="cta-button" data-i18n="cookie.accept">Verstanden!</button>
+      </div>
+    </div>
   </div>
-  <div class="footer-bottom-bar">
-    <p>&copy; 2025 Samuel Seelig</p>
-  </div>
-</footer>
 
-<script src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

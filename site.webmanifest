@@ -1,12 +1,13 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "Seelig Designs",
+  "name": "Seelig Designs – Fotografie von Samuel Seelig",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
     "sizes": "192x192"
   }],
   "start_url": "/?utm_source=homescreen",
-  "background_color": "#fafafa",
-  "theme_color": "#fafafa"
+  "background_color": "#121212",
+  "theme_color": "#F2A007",
+  "display": "standalone"
 }
