@@ -28,13 +28,14 @@ const HTML_FILE = 'gallery.html';
 
 // Reihenfolge + englische Labels. Ordnername = deutsches Label.
 const CONFIG = [
-  { dir: 'Portraits',   en: 'Portraits' },
-  { dir: 'Street',      en: 'Street' },
-  { dir: 'Landschaft',  en: 'Landscape' },
-  { dir: 'Natur',       en: 'Nature & Animals' },
-  { dir: 'Architektur', en: 'Architecture' },
-  { dir: 'Events',      en: 'Events' },
-  { dir: 'Cosplay',     en: 'Cosplay' },
+  { dir: 'Portraits',          en: 'Portraits' },
+  { dir: 'Street',             en: 'Street' },
+  { dir: 'Landschaft & Natur', en: 'Landscape & Nature' },
+  { dir: 'Architektur',        en: 'Architecture' },
+  { dir: 'Events',             en: 'Events' },
+  { dir: 'Hochzeit',           en: 'Weddings' },
+  { dir: 'Stylized',           en: 'Stylized' },
+  { dir: 'Technik',            en: 'Technology' }
 ];
 
 const RASTER = ['.jpg', '.jpeg', '.png', '.JPG', '.JPEG', '.PNG'];
