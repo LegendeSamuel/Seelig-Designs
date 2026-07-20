@@ -26,9 +26,9 @@
       'cookie.accept': 'Verstanden!',
 
       // --- Home: Hero & Intro ---
-      'hero.title': 'Wäre es einfach,<br>wäre es langweilig.',
+      'hero.title': 'Wenn es einfach wäre,<br>wäre es langweilig.',
       'intro.h2': 'Wer ich bin',
-      'intro.p': "Ich bin Samuel Seelig – Fotograf, Beobachter und leidenschaftlicher Moment-Jäger. Als ich in Japan Regentropfen mitten in der Luft festhielt, wurde mir klar, was mich wirklich antreibt: die Zeit anzuhalten, flüchtige Momente einzufangen und sichtbar zu machen. <strong>„Wäre es einfach, wäre es langweilig&quot;</strong> – dieses Motto begleitet mich seit meiner Schulzeit. Ich suche bewusst die Herausforderung, denn genau dort entstehen bleibende Bilder. Ob spontane Freude auf einem Event, feine Details in der Architektur oder die Ruhe einer Landschaft – ich gehe an die Fotografie heran wie an die Tierbeobachtung: leise und geduldig, wartend auf den perfekten Moment. Meine Kamera ist kein bloßes Werkzeug, sie ist meine Art, Menschen, Geschichten und Natur authentisch festzuhalten.",
+      'intro.p': "Ich bin Samuel Seelig – Fotograf, Beobachter und leidenschaftlicher Moment-Jäger. Als ich in Japan Regentropfen mitten in der Luft festhielt, wurde mir klar, was mich wirklich antreibt: die Zeit anzuhalten, flüchtige Momente einzufangen und sichtbar zu machen. <strong>„Wenn es einfach wäre, wäre es langweilig&quot;</strong> – dieses Motto begleitet mich seit meiner Schulzeit. Ich suche bewusst die Herausforderung, denn genau dort entstehen bleibende Bilder. Ob spontane Freude auf einem Event, feine Details in der Architektur oder die Ruhe einer Landschaft – ich gehe an die Fotografie heran wie an die Tierbeobachtung: leise und geduldig, wartend auf den perfekten Moment. Meine Kamera ist kein bloßes Werkzeug, sie ist meine Art, Menschen, Geschichten und Natur authentisch festzuhalten.",
 
       // --- Home: Showcase ---
       'showcase.h2': 'Highlights',
@@ -78,7 +78,7 @@
       'about.lead': 'Fotograf aus Leidenschaft. Ich halte fest, was sich nicht wiederholt.',
       'about.story.h2': 'Meine Geschichte',
       'about.story.p1': 'Alles begann mit einem einzigen Moment: Regentropfen, die in Japan mitten in der Luft zu schweben schienen. In diesem Augenblick verstand ich, was mich antreibt – die Fähigkeit, Zeit anzuhalten und das Flüchtige sichtbar zu machen. Seitdem ist die Kamera mein ständiger Begleiter.',
-      'about.story.p2': 'Mein Leitspruch begleitet mich seit der Schulzeit: „Wäre es einfach, wäre es langweilig." Ich suche bewusst die Herausforderung, denn genau dort entstehen die Bilder, die bleiben. Geduld ist dabei mein wichtigstes Werkzeug – ich arbeite wie bei der Tierbeobachtung: leise, aufmerksam und immer bereit für den entscheidenden Augenblick.',
+      'about.story.p2': 'Mein Leitspruch begleitet mich seit der Schulzeit: „Wenn es einfach wäre, wäre es langweilig." Ich suche bewusst die Herausforderung, denn genau dort entstehen die Bilder, die bleiben. Geduld ist dabei mein wichtigstes Werkzeug – ich arbeite wie bei der Tierbeobachtung: leise, aufmerksam und immer bereit für den entscheidenden Augenblick.',
       'about.approach.h2': 'Mein Ansatz',
       'about.approach.p': 'Ob Hochzeit, Event, Portrait oder Landschaft – ich bleibe im Hintergrund und lasse die Momente für sich sprechen. Authentizität steht über Inszenierung. Ich möchte, dass du dich beim Betrachten deiner Bilder wieder genau so fühlst wie in dem Moment, als sie entstanden.',
       'about.services.h2': 'Was ich fotografiere',
