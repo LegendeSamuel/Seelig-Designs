@@ -391,17 +391,19 @@ body.mobile-menu-open .mobile-menu-button span::after {
      amber overlay (z-index:-1) render inside the hero instead of behind the
      page background. */
   isolation: isolate;
-  /* Changed from fixed to relative */
   width: 100%;
-  height: 30vh;
-  margin-top: 7rem;
-  /* Add margin-top to account for header height */
+  /* No top/bottom margins: the video fills the whole hero band, including the
+     area behind the fixed (glass) header — and there is no black gap before
+     the page content. padding-top keeps the title clear of the header while
+     the video (absolute, inset:0) still covers the full height. */
+  min-height: 45vh;
+  margin: 0;
+  padding-top: 7rem;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin-bottom: 4rem;
-  /* Add margin bottom before content */
 }
 
 .hero-child-background {
