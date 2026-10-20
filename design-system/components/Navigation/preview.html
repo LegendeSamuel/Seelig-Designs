@@ -1,0 +1,39 @@
+<!-- @dsCard group="Navigation" height=150 -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<title>Navigation — preview</title>
+<style>
+  html, body { margin: 0; }
+  body { padding: 0; background: var(--surface); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+  .cap { font-size: 12.8px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-caption); margin: 0 0 var(--space-1); }
+  .sd-header nav { padding: 0 1.5rem; }
+  .nav-left ul { gap: 1.4rem; }
+  .nav-left a { font-size: 1.15rem; }
+  .nav-right { gap: 0.6rem; }
+  .nav-right .logo { height: 2rem; }
+  .lang-toggle { font-size: 0.7rem; padding: 0.25rem 0.5rem; }
+</style>
+</head>
+<body class="sd">
+<header class="sd-header" style="background-image:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url(../../../img/hero.jpg);background-size:cover;background-position:center">
+  <nav>
+    <div class="nav-left"><ul>
+      <li><a href="#" class="active-link" aria-current="page">Home</a></li>
+      <li><a href="#">Galerie</a></li>
+      <li><a href="#">Portfolio</a></li>
+      <li><a href="#">Über mich</a></li>
+      <li><a href="#">Kontakt</a></li>
+    </ul></div>
+    <div class="nav-right">
+      <button class="lang-toggle" type="button" aria-label="Sprache wechseln"><span data-lang="de" class="active">DE</span><span class="lang-sep">/</span><span data-lang="en">EN</span></button>
+      <img src="../../../img/Left_Logo_Name_wht.svg" alt="Seelig Designs Logo" class="logo">
+    </div>
+  </nav>
+</header>
+</body>
+</html>

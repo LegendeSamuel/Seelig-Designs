@@ -1,0 +1,25 @@
+<!-- @dsCard group="Media" height=380 -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<title>Lightbox — preview</title>
+<style>
+  html, body { margin: 0; }
+  body { padding: 0; background: var(--surface); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+  .cap { font-size: 12.8px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-caption); margin: 0 0 var(--space-1); }
+</style>
+</head>
+<body class="sd">
+<div class="lightbox" style="height:380px">
+  <button class="lb-btn lb-close" aria-label="Schließen">&times;</button>
+  <button class="lb-btn lb-prev" aria-label="Zurück">&lsaquo;</button>
+  <img class="lb-image" src="../../../img/gallery/Architektur/pexels-samuel-seelig-5998373-28358769.webp" alt="Architekturfotografie">
+  <button class="lb-btn lb-next" aria-label="Weiter">&rsaquo;</button>
+  <span class="lb-counter">3 / 24</span>
+</div>
+</body>
+</html>

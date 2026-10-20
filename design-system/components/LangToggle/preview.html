@@ -1,0 +1,22 @@
+<!-- @dsCard group="Navigation" height=90 -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<title>LangToggle — preview</title>
+<style>
+  html, body { margin: 0; }
+  body { padding: 24px; background: var(--surface); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+  .cap { font-size: 12.8px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-caption); margin: 0 0 var(--space-1); }
+</style>
+</head>
+<body class="sd">
+<div class="row">
+  <button class="lang-toggle" type="button" aria-label="Sprache wechseln"><span data-lang="de" class="active">DE</span><span class="lang-sep">/</span><span data-lang="en">EN</span></button>
+  <button class="lang-toggle" type="button" aria-label="Switch language"><span data-lang="de">DE</span><span class="lang-sep">/</span><span data-lang="en" class="active">EN</span></button>
+</div>
+</body>
+</html>
