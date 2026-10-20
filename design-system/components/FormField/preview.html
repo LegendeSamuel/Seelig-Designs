@@ -1,0 +1,27 @@
+<!-- @dsCard group="Forms" height=470 -->
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../tokens.css">
+<link rel="stylesheet" href="../bundle.css">
+<title>FormField — preview</title>
+<style>
+  html, body { margin: 0; }
+  body { padding: 24px; background: var(--surface); }
+  .row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3); }
+  .cap { font-size: 12.8px; letter-spacing: 1px; text-transform: uppercase; color: var(--text-caption); margin: 0 0 var(--space-1); }
+</style>
+</head>
+<body class="sd">
+<div class="form-wrapper" style="max-width:520px">
+  <h2>Nachricht senden</h2>
+  <form class="contact-form" onsubmit="return false">
+    <div class="form-group"><label for="n">Name <span class="required">*</span></label><input id="n" type="text" placeholder="Dein Name"></div>
+    <div class="form-group"><label for="e">E-Mail <span class="required">*</span></label><input id="e" class="is-focus" type="email" value="samuel@beispiel.de"></div>
+    <div class="form-group"><label for="m">Nachricht <span class="required">*</span></label><textarea id="m" rows="3" placeholder="Erzähl mir von deinem Projekt ..."></textarea></div>
+    <button type="submit" class="cta-button cta-button--block">Nachricht senden</button>
+  </form>
+</div>
+</body>
+</html>

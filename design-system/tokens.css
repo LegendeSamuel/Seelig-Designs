@@ -1,0 +1,184 @@
+/* Seelig Designs – Design Tokens.
+   Generiert aus design-system/tokens.json (Export des Claude Design Systems).
+   Nicht von Hand ändern: Quelle ist tokens.json. */
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Lightitalic.woff2') format('woff2');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regularitalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Farbe */
+  --yellow: #f2cb07;
+  --gold: #f2b807;
+  --amber: #f2a007;
+  --orange: #d97a07;
+  --rust: #bf4a06;
+  --accent: var(--amber);
+  --accent-hover: var(--gold);
+  --on-accent: #121212;
+  --bg: #121212;
+  --surface: #181818;
+  --surface-card: #1c1c1c;
+  --surface-translucent: rgba(24, 24, 24, 0.85);
+  --surface-showreel: rgba(28, 28, 28, 0.85);
+  --surface-showcase: rgba(34, 34, 34, 0.85);
+  --surface-panel: rgba(30, 30, 30, 0.6);
+  --fill-subtle: rgba(255, 255, 255, 0.03);
+  --fill-chip: rgba(255, 255, 255, 0.04);
+  --fill-hover: rgba(255, 255, 255, 0.08);
+  --field: rgba(0, 0, 0, 0.3);
+  --field-focus: rgba(0, 0, 0, 0.5);
+  --text: #ffffff;
+  --text-soft: #eaeaea;
+  --text-secondary: #e0e0e0;
+  --text-muted: #d0d0d0;
+  --text-label: #cccccc;
+  --text-subtle: #aaaaaa;
+  --text-caption: #888888;
+  --text-note: #f0e2c8;
+  --line-faint: rgba(255, 255, 255, 0.05);
+  --line-subtle: rgba(255, 255, 255, 0.08);
+  --line: rgba(255, 255, 255, 0.1);
+  --line-strong: rgba(255, 255, 255, 0.15);
+  --line-control: rgba(255, 255, 255, 0.2);
+  --line-toggle: rgba(255, 255, 255, 0.3);
+  --accent-overlay: rgba(242, 160, 7, 0.8);
+  --accent-border-soft: rgba(242, 160, 7, 0.5);
+  --accent-glow: rgba(242, 160, 7, 0.2);
+  --accent-wash: rgba(242, 160, 7, 0.1);
+  --hero-tint: rgba(255, 170, 0, 0.33);
+  --scrim-lightbox: rgba(8, 8, 8, 0.95);
+  --scrim-video: rgba(0, 0, 0, 0.45);
+  --scrim-menu: rgba(0, 0, 0, 0.8);
+  --scrim-counter: rgba(0, 0, 0, 0.4);
+
+  /* Schrift */
+  --font-sans: "Sofia Pro", sans-serif;
+  --type-display-size: clamp(2rem, 5vw, 4rem); --type-display-weight: 200; --type-display-line-height: 1.2;
+  --type-stat-size: 56px; --type-stat-weight: 200; --type-stat-line-height: 1;
+  --type-section-title-size: 48px; --type-section-title-weight: 300;
+  --type-panel-title-size: 32px; --type-panel-title-weight: 300;
+  --type-card-title-size: 24px; --type-card-title-weight: 400;
+  --type-lead-size: 24px; --type-lead-weight: 300; --type-lead-line-height: 1.4;
+  --type-quote-size: 20.8px; --type-quote-weight: 300; --type-quote-line-height: 1.6;
+  --type-body-size: 19.2px; --type-body-weight: 300; --type-body-line-height: 1.6;
+  --type-body-sm-size: 16.8px; --type-body-sm-weight: 300; --type-body-sm-line-height: 1.6;
+  --type-small-size: 16px; --type-small-weight: 300; --type-small-line-height: 1.5;
+  --type-consent-size: 14.4px; --type-consent-weight: 300; --type-consent-line-height: 1.5;
+  --type-nav-link-size: 24px; --type-nav-link-weight: 700;
+  --type-nav-link-mobile-size: 40px; --type-nav-link-mobile-weight: 300; --type-nav-link-mobile-letter-spacing: 1px;
+  --type-button-size: 16px; --type-button-weight: 600; --type-button-letter-spacing: 1px;
+  --type-author-size: 17.6px; --type-author-weight: 600;
+  --type-contact-value-size: 17.6px; --type-contact-value-weight: 500;
+  --type-input-size: 16px; --type-input-weight: 400;
+  --type-chip-size: 15.2px; --type-chip-weight: 500;
+  --type-label-size: 14.4px; --type-label-weight: 400;
+  --type-lang-toggle-size: 13.6px; --type-lang-toggle-weight: 600; --type-lang-toggle-letter-spacing: 1px;
+  --type-eyebrow-size: 12.8px; --type-eyebrow-weight: 300; --type-eyebrow-letter-spacing: 1px;
+
+  /* Abstände */
+  --space-1: 0.5rem;
+  --space-1-5: 0.75rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-6: 3rem;
+  --space-8: 4rem;
+  --space-12: 6rem;
+  --gap-masonry: 20px;
+  --gap-gallery: 18px;
+  --nav-gap: 2.5rem;
+  --header-height: 7rem;
+
+  /* Radien */
+  --radius-xs: 6px;
+  --radius-sm: 8px;
+  --radius-md: 10px;
+  --radius-gallery: 12px;
+  --radius-lg: 15px;
+  --radius-xl: 20px;
+  --radius-pill: 50px;
+  --radius-round: 50%;
+
+  /* Schatten */
+  --shadow-tile: 0 5px 15px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 10px 20px rgba(0, 0, 0, 0.2);
+  --shadow-frame: 0 15px 40px rgba(0, 0, 0, 0.6);
+  --shadow-portrait: 0 15px 40px rgba(0, 0, 0, 0.5);
+  --shadow-panel: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-lightbox: 0 20px 60px rgba(0, 0, 0, 0.7);
+  --shadow-play: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-focus: 0 0 10px rgba(242, 160, 7, 0.2);
+  --shadow-glass: inset 0 0 2px 1px rgba(255, 255, 255, 0.15), inset 0 0 10px 4px rgba(255, 255, 255, 0.05), 0px 4px 16px rgba(0, 0, 0, 0.2), 0px 8px 24px rgba(0, 0, 0, 0.2);
+  --text-shadow-hero: 0 1px 2px rgba(0, 0, 0, 0.7);
+
+  /* Ebenen */
+  --z-hero: 1;
+  --z-content: 10;
+  --z-menu: 999;
+  --z-header: 1000;
+  --z-banner: 10000;
+  --z-lightbox: 20000;
+
+  /* Breakpoints (nur Referenz, in @media nicht nutzbar) */
+  --bp-xs: 400px;
+  --bp-sm: 600px;
+  --bp-md: 768px;
+  --bp-lg: 992px;
+  --bp-xl: 1250px;
+}
