@@ -87,5 +87,5 @@ GitHub Pages veröffentlicht den Stand von `main` direkt aus dem Repository-Root
 ## Kontakt
 
 - E-Mail: samuelseelig@gmail.com
-- Instagram: [@seelig_designs](https://www.instagram.com/seelig_designs/)
+- Instagram: [@samuel.seelig](https://www.instagram.com/samuel.seelig/)
 - Pexels: [Samuel Seelig](https://www.pexels.com/de-de/@samuel-seelig-5998373/)
