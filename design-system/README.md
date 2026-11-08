@@ -59,7 +59,7 @@ Seelig Designs is the photography studio of Samuel Seelig. The brand is photogra
 
 ## Typography
 
-- One family: **Sofia Pro** (`--font-sans`), self-hosted woff2, weights 200–700 and Light/Regular italics. Sofia Pro Condensed is in the repository but not used on the site; don't introduce it.
+- One family: **Sofia Pro** (`--font-sans`), self-hosted woff2, weights 200–700 and Light/Regular italics. Only the eight weights the site loads are in the repository (no desktop `.otf`, no Condensed); don't introduce others.
 - The site's typography is **light**: `display` h1 at 200 (Extra-Light), `section-title` h2 at 300, `body` paragraphs at 300 and 19.2px/1.6. Weight only climbs for UI: `button` 600, `nav-link` 700, `contact-value` 500.
 - Italic is reserved for voice: the `lead` line on About and testimonial `quote`s.
 - Uppercase + 1px tracking for `button`, `eyebrow` and `lang-toggle` only.
