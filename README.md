@@ -39,7 +39,7 @@ Funktionen:
 ├── img/
 │   ├── gallery/<Kategorie>/                   Galerie-Bilder (JPG + WebP)
 │   └── featured/                              Highlights der Startseite
-├── Fonts/SofiaPro/                            Selbst gehostete Schrift
+├── Fonts/SofiaPro/woff2/                      Selbst gehostete Schrift (nur Web-Schnitte)
 ├── icons/                                     Logo und Kontakt-Icons
 ├── design-system/                             Tokens, Komponenten, Markenleitfaden
 ├── scripts/                                   Galerie- und Bild-Skripte (Node)
@@ -48,14 +48,13 @@ Funktionen:
 
 ## Lokal starten
 
-Voraussetzung: [Node.js](https://nodejs.org/) (für die Skripte und den Dev-Server).
+Die Seite ist statisch und braucht keinen Build. Zum Ansehen reicht ein beliebiger lokaler Server im Projektordner, zum Beispiel:
 
 ```bash
-npm install
-npm start          # Dev-Server mit Live-Reload (webpack-dev-server)
+npx serve .
 ```
 
-Da die Seite statisch ist, reicht zum reinen Ansehen auch ein beliebiger lokaler Server, zum Beispiel `npx serve .`.
+Für die Galerie- und Bild-Skripte einmalig `npm install` ausführen (installiert `sharp`).
 
 ## Galerie pflegen
 
@@ -83,9 +82,7 @@ GitHub Pages veröffentlicht den Stand von `main` direkt aus dem Repository-Root
 
 ## Rechtliches
 
-- Alle Fotos, Videos, Logos und Texte: © Samuel Seelig. Alle Rechte vorbehalten. Nutzung nur nach Absprache.
-- `LICENSE.txt` (MIT) stammt aus dem HTML5 Boilerplate und gilt für dessen Grundgerüst, nicht für die Inhalte.
-- Sofia Pro ist eine kommerzielle Schrift und unterliegt der Lizenz ihres Herstellers.
+© Samuel Seelig. Alle Rechte vorbehalten. Das Repository ist öffentlich einsehbar, aber nicht frei lizenziert: Fotos, Videos, Logos, Texte, Design System und Code dürfen ohne Zustimmung nicht weiterverwendet werden. Details und Hinweise zu Bestandteilen Dritter (Sofia Pro, HTML5 Boilerplate) in [`LICENSE.txt`](LICENSE.txt).
 
 ## Kontakt
 
