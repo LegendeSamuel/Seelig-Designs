@@ -106,53 +106,36 @@ personenbezogene Daten verarbeiten:
 
 ---
 
-## 8. Hosting & Domain (deine Frage)
+## 8. Hosting & Domain (Stand: 15.11.2026)
 
-Aktuell läuft die Seite auf **GitHub Pages** unter
-`https://legendesamuel.github.io/Seelig-Designs/` (kostenlos, mit HTTPS). Das
-ist für den Start völlig in Ordnung. Für einen professionellen Auftritt lohnt
-sich eine **eigene Domain** (z. B. `seelig-designs.de`).
+Die Seite läuft auf **GitHub Pages** unter der eigenen Domain
+**`https://seelig-designs.eu/`** (kostenlos, mit HTTPS). Domain und Postfach
+liegen bei **IONOS** (E-Mail-Paket Base 1).
 
-### Option A – Domain kaufen + auf GitHub Pages zeigen (empfohlen, einfachster Weg)
-1. Domain bei einem Registrar kaufen (~10–20 €/Jahr): **INWX**, **Namecheap**,
-   **Cloudflare Registrar** (zum Selbstkostenpreis), **Porkbun**.
-2. In den Repo-Einstellungen unter **Settings → Pages → Custom domain** die
-   Domain eintragen (legt eine `CNAME`-Datei an).
-3. Beim Registrar DNS setzen: `CNAME` (bzw. `ALIAS`/`ANAME` für die
-   Root-Domain) auf `legendesamuel.github.io` – bzw. die vier A-Records von
-   GitHub. GitHub stellt **kostenloses HTTPS** bereit (Let's Encrypt).
-4. Danach in den SEO-Tags/der Sitemap die URL einmal ersetzen (siehe unten).
+**Aufbau**
+- DNS bei IONOS: vier `A`- und vier `AAAA`-Records auf GitHub Pages, `www` als
+  `CNAME` auf `legendesamuel.github.io`. Hauptadresse ist die Domain ohne `www`.
+- Im Repo liegt eine `CNAME`-Datei mit dem Inhalt `seelig-designs.eu`. Sie darf
+  nicht gelöscht werden, sonst entfällt die Custom Domain.
+- Die alte Adresse `legendesamuel.github.io/Seelig-Designs/` leitet automatisch
+  per 301 auf die neue Domain weiter.
+- Die Domain ist in GitHub (Settings → Pages) per TXT-Record verifiziert,
+  „Enforce HTTPS" ist aktiv.
+- Mail: MX, SPF (`include:_spf-eu.ionos.com`), DKIM (`s1`/`s2`) und DMARC
+  (`CNAME` auf IONOS) sind von IONOS gesetzt.
 
-### Option B – Cloudflare als DNS/CDN davor (kostenlos)
-Domain bei einem Registrar, DNS über **Cloudflare** (gratis) → bringt CDN,
-Caching und zusätzliche Sicherheit (Checklisten-Punkte 4 & 8). Ziel bleibt
-GitHub Pages.
+**Sicherheit**
+- 2FA am IONOS-Konto und im Webmail; die Reset-Mail des Kontos ist eine
+  Adresse außerhalb dieser Domain.
+- Domain Guard bei IONOS aktiv.
+- Externe Mailprogramme nutzen ein App-Passwort pro Gerät.
 
-### Option C – Open-Source / selbst hosten
-- **Codeberg Pages** (Open Source, EU/Deutschland) – DSGVO-freundliche
-  Alternative zu GitHub Pages.
-- **Netlify** / **Cloudflare Pages** – ebenfalls kostenlos, mehr Features
-  (Formulare, Deploy-Previews).
-- **Eigener Server** (VPS mit **Caddy** oder **nginx**): volle Kontrolle,
-  automatisches HTTPS mit Caddy – aber du musst Updates/Backups selbst machen
-  (Checklisten-Punkt 8 & 12). Für ein statisches Portfolio meist Overkill.
-
-> **„DNS selbst hosten"** ist technisch möglich (eigener Bind9/PowerDNS), aber
-> für dich nicht sinnvoll: Ausfallsicherheit und Aufwand stehen in keinem
-> Verhältnis. Nimm einen etablierten DNS-Anbieter (Registrar oder Cloudflare).
-
-### Domain in den Code übernehmen
-Wenn deine Domain feststeht, ersetze ich die Platzhalter-URLs in einem Schritt.
-Manuell ginge es z. B. so (im Projektordner):
-
-```bash
-# Beispiel: von der github.io-URL auf die eigene Domain umstellen
-grep -rl "legendesamuel.github.io/Seelig-Designs" --include="*.html" --include="*.xml" . \
-  | xargs sed -i 's#https://legendesamuel.github.io/Seelig-Designs#https://www.seelig-designs.de#g'
-```
-
-Danach greifen Canonical-Tags, Open-Graph-Vorschaubilder und die Sitemap auf
-die richtige Domain.
+**Bei Änderungen am Code beachten**
+- `canonical`, `og:url`, `og:image`, JSON-LD, `sitemap.xml` und `robots.txt`
+  verwenden ausschließlich `https://seelig-designs.eu/…`.
+- Alternativen zu GitHub Pages (Codeberg Pages, Netlify, Cloudflare Pages,
+  eigener Server mit Caddy) bleiben möglich. Dann müssen DNS-Records und die
+  `CNAME`-Datei angepasst werden.
 
 ---
 
