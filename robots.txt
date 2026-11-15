@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.seelig-designs.de/sitemap.xml
+Sitemap: https://seelig-designs.eu/sitemap.xml

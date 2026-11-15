@@ -5,7 +5,7 @@ Portraits, Hochzeiten, Events, Street, Landschaft und mehr.
 
 > *Wäre es einfach, wäre es langweilig.*
 
-**Live:** https://legendesamuel.github.io/Seelig-Designs/
+**Live:** https://seelig-designs.eu/
 
 ## Überblick
 
