@@ -24,7 +24,7 @@ Funktionen:
 - **Zweisprachig (DE/EN):** Texte über `data-i18n`-Attribute, Wörterbuch in `js/i18n.js`. Die gewählte Sprache wird im `localStorage` gemerkt, Standard ist Deutsch.
 - **Galerie aus Ordnern:** Jeder Unterordner in `img/gallery/` ist eine Kategorie. Ein Skript schreibt Filter und Bildraster in `gallery.html`.
 - **Liquid-Glass-Oberflächen** für Header, Mobilmenü und Cookie-Banner (SVG-Displacement-Filter in `js/app.js`).
-- **Datenschutzfreundlich:** Schrift (Sofia Pro) selbst gehostet, YouTube-Showreel lädt erst nach Klick über `youtube-nocookie.com`.
+- **Datenschutzfreundlich:** YouTube-Showreel lädt erst nach Klick über `youtube-nocookie.com`.
 - **SEO:** Open-Graph-Tags, JSON-LD (`ProfessionalService`), `sitemap.xml`, `robots.txt`.
 
 ## Projektstruktur
@@ -39,7 +39,6 @@ Funktionen:
 ├── img/
 │   ├── gallery/<Kategorie>/                   Galerie-Bilder (JPG + WebP)
 │   └── featured/                              Highlights der Startseite
-├── Fonts/SofiaPro/woff2/                      Selbst gehostete Schrift (nur Web-Schnitte)
 ├── icons/                                     Logo und Kontakt-Icons
 ├── design-system/                             Tokens, Komponenten, Markenleitfaden
 ├── scripts/                                   Galerie- und Bild-Skripte (Node)

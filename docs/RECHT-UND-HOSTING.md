@@ -21,14 +21,14 @@ und Hinweistext gezeigt; das echte iframe (über `youtube-nocookie.com`) lädt
 **erst nach Klick**. Damit werden vor der aktiven Einwilligung keine Daten an
 Google übertragen – gut für Datenschutz *und* Ladezeit.
 
-### ✅ Schriften – ERLEDIGT (Sofia Pro selbst gehostet)
-Früher kamen die Schriften über `use.typekit.net` von Adobe (IP-Übertragung
-in die USA). **Jetzt gelöst:** Sofia Pro wird lokal aus `Fonts/SofiaPro/`
-ausgeliefert – kein externer Font-Request mehr. Der Typekit-Link wurde auf
-allen Seiten entfernt.
-- **Deine Aufgabe:** stelle sicher, dass du eine gültige **Webfont-Lizenz** für
-  Sofia Pro besitzt (kommerzielle Schrift; das Selbst-Hosten muss lizenziert
-  sein).
+### ✅ Schriften – Sofia Pro über Adobe Fonts
+Sofia Pro kommt über das Adobe-Fonts-Kit `ycu3fcu` (`use.typekit.net`). Die
+Lizenz deckt nur diese Einbindung ab, **nicht** das Selbst-Hosten der
+WOFF2-Dateien; die wurden deshalb im November 2026 entfernt (Anlass: Anfrage
+von Font Radar im Auftrag von Mostardesign).
+- Folge: IP-Übertragung an Adobe (ggf. USA). Ist in der Datenschutzerklärung
+  genannt (Abschnitt „Schriftarten (Adobe Fonts)“).
+- Keine Schriftdateien wieder ins Repository legen.
 
 ### 🟠 Kontaktformular über Formspree (USA)
 `contact.html` schickt das Formular an `formspree.io` – ein US-Dienst, der die
@@ -59,8 +59,7 @@ tatsächlichen Setup passen. Sie muss **alle** eingesetzten Dienste abdecken:
 - [ ] **Formspree** (Kontaktformular) nennen.
 - [ ] **YouTube** (Showreel) nennen – ist bereits enthalten, an die gewählte
       Lösung aus Punkt 1 anpassen.
-- [x] **Schriften**: selbst gehostet (Sofia Pro) – kein externer Font-Dienst
-      mehr zu nennen. In der Datenschutzerklärung ist das bereits so vermerkt.
+- [x] **Schriften**: Adobe Fonts (Sofia Pro) – in der Datenschutzerklärung genannt.
 - [ ] **WhatsApp**-Link (Klick führt zu Meta/WhatsApp) nennen.
 - [ ] Betroffenenrechte, Rechtsgrundlagen (Art. 6 DSGVO), Kontakt der
       verantwortlichen Stelle.
@@ -82,7 +81,7 @@ Verträge zur Auftragsverarbeitung mit allen Dienstleistern, die
 personenbezogene Daten verarbeiten:
 - [ ] GitHub (Hosting)
 - [ ] Formspree (Formular)
-- [ ] ggf. Adobe (Fonts), Google (YouTube)
+- [ ] Adobe (Fonts), Google (YouTube)
 
 ## 6. AGB & Widerruf
 

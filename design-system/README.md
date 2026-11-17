@@ -8,7 +8,7 @@ Dieser Ordner ist die Referenz für Farben, Schrift, Abstände und Komponenten d
 | Datei | Zweck |
 |---|---|
 | `tokens.json` | Quelle aller Tokens, mit Verwendungszweck pro Token |
-| `tokens.css` | Dieselben Tokens als CSS-Variablen plus `@font-face` für Sofia Pro (lädt aus `../Fonts/SofiaPro/woff2/`) |
+| `tokens.css` | Dieselben Tokens als CSS-Variablen plus `@import` des Adobe-Fonts-Kits für Sofia Pro (`use.typekit.net/ycu3fcu.css`) |
 | `components/bundle.css` | Komponenten-Styles, Klassennamen wie auf der Website, Werte über Tokens |
 | `components/<Name>/README.md` | Wann und wie die Komponente eingesetzt wird |
 | `components/<Name>/preview.html` | Statische Vorschau, direkt im Browser öffnen |
@@ -22,7 +22,7 @@ Logos, Icons und Fotos liegen nicht doppelt hier, sondern an ihrem Platz im Repo
 | Wordmark weiß / schwarz | `img/Left_Logo_Name_wht.svg`, `img/Left_Logo_Name_blk.svg` |
 | Bildmarke weiß / schwarz | `icons/Logo_wht.svg`, `img/Logo_blk.svg` |
 | Icons (E-Mail, Telefon, WhatsApp, Instagram, Kamera) | `icons/*-svgrepo-com.svg` |
-| Schrift | `Fonts/SofiaPro/woff2/` |
+| Schrift | Adobe Fonts, Kit `ycu3fcu` |
 
 ## Regeln für Änderungen
 
@@ -59,7 +59,7 @@ Seelig Designs is the photography studio of Samuel Seelig. The brand is photogra
 
 ## Typography
 
-- One family: **Sofia Pro** (`--font-sans`), self-hosted woff2, weights 200–700 and Light/Regular italics. Only the eight weights the site loads are in the repository (no desktop `.otf`, no Condensed); don't introduce others.
+- One family: **Sofia Pro** (`--font-sans`, family name `sofia-pro`), served by Adobe Fonts (kit `ycu3fcu`); the site uses weights 200–700 and Light/Regular italics. Never self-host the font files: the Adobe licence only covers the kit.
 - The site's typography is **light**: `display` h1 at 200 (Extra-Light), `section-title` h2 at 300, `body` paragraphs at 300 and 19.2px/1.6. Weight only climbs for UI: `button` 600, `nav-link` 700, `contact-value` 500.
 - Italic is reserved for voice: the `lead` line on About and testimonial `quote`s.
 - Uppercase + 1px tracking for `button`, `eyebrow` and `lang-toggle` only.
@@ -110,7 +110,7 @@ Seelig Designs is the photography studio of Samuel Seelig. The brand is photogra
 
 ## Not synced
 
-- Sofia Pro Condensed, and the Sofia Pro weights the site doesn't load (UltraLight, Black, most italics), are left out. The desktop `.otf` files are left out too.
+- Sofia Pro Condensed and the desktop `.otf` files are not part of the system; no font files are in the repository.
 - The liquid-glass SVG displacement filter (`GlassSurface` in js/app.js) is JavaScript. The previews show its CSS fallback.
 - The GSAP motion (hero split text, cookie fade) is described under Motion, not shipped.
 - Components are static HTML plus `bundle.css` (the site has no component library), so there is no `bundle.js`.

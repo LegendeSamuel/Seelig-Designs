@@ -17,9 +17,8 @@ Bestandteile Dritter
 --------------------
 
 Schrift „Sofia Pro“
-  Die Dateien unter Fonts/ sind eine lizenzierte kommerzielle Schrift. Sie
-  dürfen ausschließlich zur Darstellung dieser Website verwendet werden. Ein
-  Herunterladen, Installieren oder Weiterverwenden ist nicht gestattet.
+  Kommerzielle Schrift von Mostardesign, eingebunden über Adobe Fonts. Sie ist
+  nicht Teil dieses Repositorys und nicht von dieser Lizenz erfasst.
 
 HTML5 Boilerplate
   Teile des Grundgerüsts (u. a. .gitattributes, .editorconfig, robots.txt,

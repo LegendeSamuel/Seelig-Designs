@@ -1,63 +1,7 @@
 /* Seelig Designs – Design Tokens.
    Generiert aus design-system/tokens.json (Export des Claude Design Systems).
    Nicht von Hand ändern: Quelle ist tokens.json. */
-
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-ExtraLight.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Lightitalic.woff2') format('woff2');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regularitalic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
+@import url("https://use.typekit.net/ycu3fcu.css");
 
 :root {
   color-scheme: dark;
@@ -108,7 +52,7 @@
   --scrim-counter: rgba(0, 0, 0, 0.4);
 
   /* Schrift */
-  --font-sans: "Sofia Pro", sans-serif;
+  --font-sans: "sofia-pro", sans-serif;
   --type-display-size: clamp(2rem, 5vw, 4rem); --type-display-weight: 200; --type-display-line-height: 1.2;
   --type-stat-size: 56px; --type-stat-weight: 200; --type-stat-line-height: 1;
   --type-section-title-size: 48px; --type-section-title-weight: 300;

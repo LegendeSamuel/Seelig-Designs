@@ -1,61 +1,4 @@
-/* === Self-hosted font: Sofia Pro (licensed webfont, replaces Adobe Typekit) === */
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-ExtraLight.woff2') format('woff2');
-  font-weight: 200;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Light.woff2') format('woff2');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Lightitalic.woff2') format('woff2');
-  font-weight: 300;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regular.woff2') format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Regularitalic.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: 'Sofia Pro';
-  src: url('../Fonts/SofiaPro/woff2/SofiaPro-Bold.woff2') format('woff2');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
+/* Sofia Pro comes from Adobe Fonts (kit ycu3fcu, linked in each page's <head>) */
 /* === Base Styles === */
 * {
   box-sizing: border-box;
@@ -66,7 +9,7 @@ html {
   margin: 0;
   padding: 0;
   width: 100%;
-  font-family: 'Sofia Pro', sans-serif;
+  font-family: 'sofia-pro', sans-serif;
   color: white;
   background-color: #121212;
   overflow-x: hidden;
